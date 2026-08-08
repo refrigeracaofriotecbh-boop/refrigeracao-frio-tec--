@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frio-Tech BH | Refrigeração e Assistência Técnica</title>
+  <title>Frio Tec BH | Refrigeração e Assistência Técnica</title>
   <style>
     * {
       margin: 0;
@@ -17,6 +17,7 @@
       --azul-medio: #0056B9;
       --azul-claro: #0099FF;
       --verde: #00B85C;
+      --verde-whats: #25D366;
       --cinza-claro: #F5F8FC;
       --texto: #333333;
       --sombra: 0 4px 20px rgba(0,0,0,0.08);
@@ -33,8 +34,6 @@
       color: white;
       padding: 45px 20px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
 
     .logo {
@@ -106,6 +105,14 @@
       border-radius: 2px;
     }
 
+    .banner-principal {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      object-fit: cover;
+    }
+
     .destaque-inicio {
       background: linear-gradient(135deg, #E6F0FA, #F0F7FF);
       padding: 40px 30px;
@@ -131,19 +138,17 @@
 
     .servicos-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 25px;
     }
 
     .servico-card {
       background: white;
-      padding: 35px 25px;
+      padding: 0;
       border-radius: 16px;
       box-shadow: var(--sombra);
       text-align: center;
-      font-size: 19px;
-      font-weight: 700;
-      color: var(--azul-escuro);
+      overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
       border-top: 4px solid var(--azul-medio);
     }
@@ -151,6 +156,18 @@
     .servico-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 8px 25px rgba(0,86,185,0.15);
+    }
+
+    .servico-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .servico-card h3 {
+      padding: 20px 15px;
+      color: var(--azul-escuro);
+      font-size: 19px;
     }
 
     .destaques {
@@ -199,23 +216,22 @@
       margin: 12px 0;
     }
 
-    .contato a {
+    .contato a.botao-principal {
       color: #fff;
       text-decoration: none;
       display: inline-block;
-      background: var(--verde);
+      background: var(--verde-whats);
       padding: 15px 35px;
       border-radius: 50px;
       margin-top: 20px;
       font-weight: 800;
       font-size: 17px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 12px rgba(0,184,92,0.3);
+      transition: transform 0.3s;
+      box-shadow: 0 4px 12px rgba(37,211,102,0.3);
     }
 
-    .contato a:hover {
+    .contato a.botao-principal:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(0,184,92,0.35);
     }
 
     footer {
@@ -238,32 +254,54 @@
       margin-bottom: 12px;
     }
 
+    /* ===== BOTÃO WHATSAPP FLUTUANTE ===== */
+    .whatsapp-flutuante {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 65px;
+      height: 65px;
+      background: var(--verde-whats);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 35px;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 5px 18px rgba(37,211,102,0.4);
+      z-index: 999;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: pulsar 2s infinite;
+    }
+
+    .whatsapp-flutuante:hover {
+      transform: scale(1.15);
+      box-shadow: 0 7px 25px rgba(37,211,102,0.5);
+    }
+
+    @keyframes pulsar {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+
     @media(max-width: 768px) {
       .logo { font-size: 32px; }
       h2 { font-size: 23px; }
       nav ul { gap: 15px; }
       section { margin: 40px auto; }
-    }
-
-    /* NOVAS CLASSES PARA AS IMAGENS FUTURISTAS */
-    .imagem-futurista {
-      width: 100%;
-      border-radius: 16px;
-      margin-bottom: 30px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-      transition: transform 0.5s ease;
-    }
-
-    .imagem-futurista:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 12px 30px rgba(0, 86, 185, 0.2);
+      .whatsapp-flutuante { width: 58px; height: 58px; font-size: 30px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- BOTÃO WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/5531973624049" target="_blank" class="whatsapp-flutuante">💬</a>
+
   <header>
-    <div class="logo">❄️ FRIO-TECH <span>BH</span></div>
+    <div class="logo">❄️ FRIO TEC <span>BH</span></div>
     <p>Assistência Técnica Especializada — Refrigeração em Geral</p>
   </header>
 
@@ -279,8 +317,8 @@
   </nav>
 
   <section id="inicio">
-    <!-- BANNER FUTURISTA -->
-    <img src="https://i.imgur.com/futurismo-banner-frio-tech.png" alt="Banner Futurista Frio-Tech BH" class="imagem-futurista">
+    <!-- FOTO DO TÉCNICO TRABALHANDO -->
+    <img src="https://images.unsplash.com/photo-1585771724684-3826d6639097?w=1100&h=400&fit=crop" alt="Técnico consertando geladeira" class="banner-principal">
     <div class="destaque-inicio">
       🛠️ Solução rápida e confiável para o seu equipamento. Atendimento em Belo Horizonte e região com qualidade e garantia.
     </div>
@@ -295,8 +333,6 @@
 
   <section id="marcas">
     <h2>Trabalhamos com Todas as Marcas</h2>
-    <!-- IMAGEM DAS MARCAS FUTURISTA -->
-    <img src="https://i.imgur.com/marcas-futuristas-frio-tech.png" alt="Marcas Parceiras Frio-Tech BH" class="imagem-futurista">
     <div class="marcas">
       Brastemp • Consul • Electrolux • Samsung • LG • Panasonic<br>
       Gelopar • Metalfrio • Eletrolux • Continental • Philips e muito mais!
@@ -305,13 +341,23 @@
 
   <section id="servicos">
     <h2>Nossos Serviços</h2>
-    <!-- IMAGEM DOS SERVIÇOS FUTURISTA -->
-    <img src="https://i.imgur.com/servicos-futuristas-frio-tech.png" alt="Serviços Frio-Tech BH" class="imagem-futurista">
     <div class="servicos-grid">
-      <div class="servico-card">🧊 Geladeira</div>
-      <div class="servico-card">❄️ Freezer</div>
-      <div class="servico-card">🍺 Cervejeiro</div>
-      <div class="servico-card">🏪 Expositor / Golbar</div>
+      <div class="servico-card">
+        <img src="https://images.unsplash.com/photo-1571175443880-4c0771f46407?w=400&h=250&fit=crop" alt="Geladeira">
+        <h3>🧊 Geladeira</h3>
+      </div>
+      <div class="servico-card">
+        <img src="https://images.unsplash.com/photo-1604713007891-d42c0b4f0a39?w=400&h=250&fit=crop" alt="Freezer">
+        <h3>❄️ Freezer</h3>
+      </div>
+      <div class="servico-card">
+        <img src="https://images.unsplash.com/photo-1579751734004-f1d0c7f09230?w=400&h=250&fit=crop" alt="Cervejeiro">
+        <h3>🍺 Cervejeiro</h3>
+      </div>
+      <div class="servico-card">
+        <img src="https://images.unsplash.com/photo-1581006854495-85be0c0d3fbc?w=400&h=250&fit=crop" alt="Expositor / Golbar">
+        <h3>🏪 Expositor / Golbar</h3>
+      </div>
     </div>
   </section>
 
@@ -333,18 +379,16 @@
 
   <section id="contato">
     <h2>Atendimento</h2>
-    <!-- IMAGEM DE CONTATO FUTURISTA -->
-    <img src="https://i.imgur.com/contato-futurista-frio-tech.png" alt="Contato Frio-Tech BH" class="imagem-futurista">
     <div class="contato">
       <p><strong>📞 WhatsApp:</strong> (31) 97362-4049</p>
       <p><strong>📍 Atendimento:</strong> Belo Horizonte e Região</p>
       <p><strong>⏰ Horário:</strong> Segunda a Sábado — 8h às 18h</p>
-      <a href="https://wa.me/5531973624049" target="_blank">💬 Chamar no WhatsApp</a>
+      <a href="https://wa.me/5531973624049" target="_blank" class="botao-principal">💬 Chamar no WhatsApp</a>
     </div>
   </section>
 
   <footer>
-    <p>❄️ Refrigeração Frio-Tech BH</p>
+    <p>❄️ Frio Tec BH</p>
     <p>Assistência Técnica em Refrigeração — Geladeira • Freezer • Cervejeiro • Expositor</p>
     <p>© 2026 — Todos os direitos reservados | 90 dias de garantia em todos os serviços</p>
   </footer>
