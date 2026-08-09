@@ -3,409 +3,287 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frio Tec BH | Conserto de Geladeira em Belo Horizonte</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18343011161"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18343011161');
-  </script>
+  <title>Frio-Tech | Assistência Técnica em Refrigeração — BH e região</title>
+
+<!-- Google Tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18343011161"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18343011161');
+</script>
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18343011161/NIFMCI25_90cENnG0KpE',
+      'value': 1.0,
+      'currency': 'BRL'
+  });
+</script>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background-color: #fff; color: #333; line-height: 1.6; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+    body { color: #222; line-height: 1.6; background: #ffffff; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    header {
-      background: linear-gradient(135deg, #0A1F44 0%, #0057b8 100%);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .logo { font-size: 42px; font-weight: bold; margin-bottom: 10px; }
-    .logo span { color: #00ccff; }
-    .subtitulo { font-size: 20px; opacity: 0.9; }
+    /* Barra fixa no topo */
+    .barra-superior { background: #000000; color: white; padding: 10px 0; position: sticky; top: 0; z-index: 1000; }
+    .barra-conteudo { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .telefone-topo { color: #60a5fa; text-decoration: none; font-weight: bold; font-size: 16px; }
+    .btn-zap-topo { background: #22c55e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; }
+    .btn-zap-topo:hover { background: #16a34a; }
 
-    section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    header.main-header { background: #f8fafc; padding: 30px 0; text-align: center; border-bottom: 3px solid #2563eb; }
+    .logo { font-size: 32px; font-weight: 900; color: #2563eb; text-decoration: none; display: inline-block; margin-bottom: 8px; }
+    .subtitulo { font-size: 18px; color: #475569; margin-bottom: 20px; }
 
-    .banner {
-      width: 100%;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-      margin-bottom: 30px;
-      background: linear-gradient(135deg, #b3d9ff, #66b3ff);
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 20px;
-      color: #00264d;
-    }
-    .banner .icone { font-size: 70px; margin-bottom: 10px; }
+    .botoes-acao { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 20px 0; }
+    .btn-ligar { background: #2563eb; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 18px; }
+    .btn-ligar:hover { background: #1d4ed8; }
+    .btn-zap { background: #22c55e; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 18px; }
+    .btn-zap:hover { background: #16a34a; }
 
-    .botao {
-      display: inline-block;
-      background: #25d366;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      text-decoration: none;
-      margin-top: 20px;
-      box-shadow: 0 4px 12px rgba(37,211,102,0.3);
-      transition: transform 0.3s;
-    }
-    .botao:hover { transform: scale(1.05); }
+    section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
+    .section-title { text-align: center; font-size: 30px; color: #1e293b; margin-bottom: 40px; font-weight: 800; position: relative; }
+    .section-title:after { content: ''; display: block; width: 70px; height: 4px; background: #2563eb; margin: 12px auto 0; border-radius: 2px; }
 
-    h2 {
-      text-align: center;
-      color: #0A1F44;
-      font-size: 28px;
-      margin-bottom: 40px;
-      position: relative;
-    }
-    h2::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: #0099ff;
-      margin: 12px auto 0;
-    }
+    /* Serviços */
+    .servicos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+    .servico-card { background: #ffffff; border: 2px solid #e2e8f0; padding: 30px 20px; border-radius: 16px; text-align: center; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
+    .servico-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(37,99,235,0.15); border-color: #2563eb; }
+    .servico-icone { font-size: 60px; margin-bottom: 15px; }
+    .servico-card h3 { font-size: 22px; color: #1e293b; margin-bottom: 10px; font-weight: 700; }
+    .servico-card p { color: #64748b; }
 
-    .sobre {
-      background: #f0f7ff;
-      padding: 35px;
-      border-radius: 12px;
-      font-size: 18px;
-      box-shadow: 0 4px 12px rgba(0,87,184,0.08);
-    }
+    /* Problemas Comuns */
+    .problemas { background: #f0f7ff; }
+    .problemas-lista { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .problema-item { background: white; padding: 15px 20px; border-radius: 10px; font-size: 17px; display: flex; align-items: center; gap: 10px; }
+    .problema-item span { color: #22c55e; font-weight: bold; font-size: 20px; }
 
-    .grade-vantagens {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
-    }
-    .vantagem {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      border-left: 4px solid #0057b8;
-    }
-    .vantagem h3 { color: #0A1F44; margin-bottom: 10px; font-size: 18px; }
+    /* Diferenciais */
+    .diferenciais-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+    .diferencial-card { text-align: center; padding: 25px; }
+    .diferencial-icone { font-size: 40px; margin-bottom: 12px; }
+    .diferencial-card h4 { font-size: 18px; margin-bottom: 8px; color: #1e293b; }
+    .diferencial-card p { color: #64748b; font-size: 15px; }
 
-    .marcas {
-      background: #f0f7ff;
-      padding: 35px;
-      border-radius: 12px;
-      text-align: center;
-      font-size: 20px;
-      color: #0A1F44;
-      font-weight: 600;
-      line-height: 1.8;
-    }
+    /* Marcas */
+    .marcas-box { background: #000000; color: white; padding: 35px; border-radius: 16px; text-align: center; font-size: 19px; line-height: 1.8; }
 
-    .grade-servicos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-    .servico {
-      background: linear-gradient(135deg, #f0f7ff, #e6f0ff);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      padding: 30px 25px;
-      border-top: 3px solid #0057b8;
-      transition: transform 0.3s;
-      text-align: center;
-    }
-    .servico:hover { transform: translateY(-8px); }
-    .servico .icone { font-size: 60px; margin-bottom: 15px; }
-    .servico h3 { color: #0A1F44; font-size: 20px; margin-bottom: 12px; }
-    .servico p { color: #444; font-size: 15px; line-height: 1.5; }
+    /* Avaliações */
+    .avaliacoes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .avaliacao-card { background: #ffffff; border: 2px solid #e2e8f0; padding: 25px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+    .estrelas { color: #f59e0b; font-size: 20px; margin-bottom: 10px; }
+    .nome { font-weight: 800; color: #1e293b; margin: 8px 0 4px; font-size: 17px; }
+    .texto { color: #475569; font-size: 16px; line-height: 1.6; }
+    .origem { margin-top: 12px; font-size: 13px; color: #94a3b8; font-style: italic; }
 
-    .passos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
-    }
-    .passo {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      text-align: center;
-    }
-    .numero {
-      width: 50px;
-      height: 50px;
-      background: #0057b8;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: bold;
-      margin: 0 auto 15px;
-    }
+    /* Perguntas */
+    .perguntas { background: #f8fafc; }
+    .pergunta-item { background: white; padding: 20px 25px; border-radius: 12px; margin-bottom: 12px; border-left: 4px solid #2563eb; }
+    .pergunta { font-weight: bold; font-size: 17px; margin-bottom: 8px; color: #1e293b; }
+    .resposta { color: #475569; font-size: 16px; }
+    .observacao { background: #fffbeb; border-left-color: #f59e0b; }
 
-    .avaliacoes {
-      background: #f9f9f9;
-      padding: 35px;
-      border-radius: 12px;
-    }
-    .grade-avaliacoes {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-    .avaliacao {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
-    .estrelas { color: #f9b800; font-size: 22px; margin-bottom: 10px; }
-    .nome-cliente { font-weight: bold; color: #0A1F44; margin-top: 12px; }
-    .origem { font-size: 14px; color: #777; }
+    /* Contato */
+    .contato-box { background: #000000; color: white; padding: 45px 35px; border-radius: 16px; text-align: center; }
+    .contato-item { font-size: 20px; margin: 15px 0; }
+    .contato-item strong { color: #93c5fd; }
 
-    .contato {
-      background: linear-gradient(135deg, #0A1F44, #0057b8);
-      color: white;
-      padding: 35px;
-      border-radius: 12px;
-      text-align: center;
-      font-size: 19px;
-    }
-    .contato p { margin: 12px 0; }
+    footer { background: #0f172a; color: white; padding: 50px 20px 30px; text-align: center; }
+    footer p { margin-bottom: 10px; opacity: 0.8; font-size: 16px; }
+    .nome-rodape { font-size: 22px; font-weight: 900; margin-bottom: 15px; opacity: 1; color: #93c5fd; }
 
-    footer {
-      background-color: #0A1F44;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-      margin-top: 60px;
-    }
-    footer p { margin: 8px 0; font-size: 16px; }
-
-    .whatsapp-flutuante {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      width: 65px;
-      height: 65px;
-      background: #25d366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 35px;
-      text-decoration: none;
-      box-shadow: 0 5px 18px rgba(37,211,102,0.4);
-      z-index: 999;
-      animation: pulsar 2s infinite;
-    }
-    @keyframes pulsar {
-      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
-      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
-      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-    }
+    .whatsapp-fixo { position: fixed; bottom: 25px; right: 25px; background: #22c55e; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 5px 20px rgba(34,197,94,0.5); z-index: 999; transition: transform 0.2s; }
+    .whatsapp-fixo:hover { transform: scale(1.1); }
 
     @media(max-width: 768px) {
-      .logo { font-size: 32px; }
+      .section-title { font-size: 26px; }
+      .btn-ligar, .btn-zap { padding: 12px 24px; font-size: 16px; }
+      .barra-conteudo { justify-content: center; }
     }
   </style>
 </head>
 <body>
 
-  <a href="https://wa.me/5531973624049" target="_blank" class="whatsapp-flutuante">💬</a>
+  <!-- Barra fixa no topo -->
+  <div class="barra-superior">
+    <div class="container barra-conteudo">
+      <a href="tel:+5531973624049" class="telefone-topo">📞 (31) 97362-4049</a>
+      <a href="https://wa.me/5531993271939?text=Ola%2C%20vim%20atraves%20do%20site%20Frio-Tech%2C%20gostaria%20de%20um%20orcamento" target="_blank" class="btn-zap-topo">💬 Chamar no WhatsApp</a>
+    </div>
+  </div>
 
-  <header>
-    <div class="logo">❄️ FRIO TEC <span>BH</span></div>
-    <p class="subtitulo">Manutenção e conserto de geladeiras — Belo Horizonte e região</p>
+  <header class="main-header">
+    <div class="container">
+      <a href="#" class="logo">❄️ FRIO-TECH</a>
+      <p class="subtitulo"><strong>Assistência Técnica em Refrigeração</strong><br>Atendemos Belo Horizonte e região — raio de 50 km</p>
+      
+      <div class="botoes-acao">
+        <a href="tel:+5531973624049" class="btn-ligar">📞 Ligar Agora</a>
+        <a href="https://wa.me/5531993271939?text=Ola%2C%20vim%20atraves%20do%20site%20Frio-Tech%2C%20gostaria%20de%20um%20orcamento" target="_blank" class="btn-zap">💬 Chamar no WhatsApp</a>
+      </div>
+    </div>
   </header>
 
   <section>
-    <div class="banner">
-      <div class="icone">🔧🧊</div>
-      <strong>Conserto de geladeira, freezer e equipamentos de refrigeração — atendimento em domicílio!</strong>
-      <br><br>✅ Orçamento gratuito | Atendimento rápido e justo
-      <br>
-      <a href="https://wa.me/5531973624049" target="_blank" class="botao">📅 Agende sua visita técnica</a>
+    <h2 class="section-title">Nossos Serviços</h2>
+    <div class="servicos-grid">
+      <div class="servico-card">
+        <div class="servico-icone">🧊</div>
+        <h3>Manutenção de Geladeira</h3>
+        <p>Conserto e manutenção de todos os modelos e marcas</p>
+      </div>
+      <div class="servico-card">
+        <div class="servico-icone">❄️</div>
+        <h3>Manutenção de Freezer</h3>
+        <p>Não gela, para de funcionar, faz barulho — resolvemos</p>
+      </div>
+      <div class="servico-card">
+        <div class="servico-icone">🍺</div>
+        <h3>Manutenção de Cervejeiro</h3>
+        <p>Limpeza, reparos e recarga de gás</p>
+      </div>
+      <div class="servico-card">
+        <div class="servico-icone">🏪</div>
+        <h3>Expositor / Frigobar</h3>
+        <p>Conserto para residência e comércio</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="problemas">
+    <h2 class="section-title">Problemas que Resolvemos</h2>
+    <div class="problemas-lista">
+      <div class="problema-item"><span>✅</span> Geladeira não gela</div>
+      <div class="problema-item"><span>✅</span> Faz muito gelo ou não faz gelo</div>
+      <div class="problema-item"><span>✅</span> Vaza água no chão</div>
+      <div class="problema-item"><span>✅</span> Faz barulho estranho</div>
+      <div class="problema-item"><span>✅</span> Não liga ou desliga sozinha</div>
+      <div class="problema-item"><span>✅</span> Luz acende mas não gela</div>
+      <div class="problema-item"><span>✅</span> Geladeira gasta muita energia</div>
+      <div class="problema-item"><span>✅</span> Congela em cima e não embaixo</div>
     </div>
   </section>
 
   <section>
-    <h2>Nossa Assistência Técnica</h2>
-    <div class="sobre">
-      <p>Profissionais treinados e experientes. Fazemos manutenção e conserto de todas as marcas — geladeira comum, inox, moderna e equipamentos comerciais.</p>
-      <br>
-      <p>A <strong>Frio Tec BH</strong> atende Belo Horizonte e região com rapidez e honestidade. Vamos até você, consertamos na hora quando possível e damos garantia do serviço.</p>
-      <br>
-      <p>Diagnóstico claro, explicação direta e preço justo. Sem pegadinha, sem surpresa na hora de pagar.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Veja porque nos contratar</h2>
-    <div class="grade-vantagens">
-      <div class="vantagem">
-        <h3>⚡ Rápido e Eficiente</h3>
-        <p>Atendimento no mesmo dia. Sua geladeira não pode ficar parada!</p>
+    <h2 class="section-title">Por que Escolher a Frio-Tech?</h2>
+    <div class="diferenciais-grid">
+      <div class="diferencial-card">
+        <div class="diferencial-icone">📝</div>
+        <h4>Orçamento Gratuito</h4>
+        <p>Taxa de deslocamento do técnico R$ 50,00. Se o orçamento for aprovado, não é cobrada.</p>
       </div>
-      <div class="vantagem">
-        <h3>💰 Orçamento Gratuito</h3>
-        <p>Você só paga se concordar. Sem compromisso!</p>
+      <div class="diferencial-card">
+        <div class="diferencial-icone">🚚</div>
+        <h4>Atendimento em Domicílio</h4>
+        <p>Vou até você em BH e região — raio de 50 km.</p>
       </div>
-      <div class="vantagem">
-        <h3>🔧 Conserto em Domicílio</h3>
-        <p>Vamos até sua casa. Não precisa trazer sua geladeira pra lugar nenhum!</p>
+      <div class="diferencial-card">
+        <div class="diferencial-icone">🔧</div>
+        <h4>Peças Originais</h4>
+        <p>Só troco peça com sua autorização prévia.</p>
       </div>
-      <div class="vantagem">
-        <h3>⭐ Garantia de Qualidade</h3>
-        <p>90 dias de garantia em todo serviço. Pode confiar!</p>
+      <div class="diferencial-card">
+        <div class="diferencial-icone">🛡️</div>
+        <h4>90 Dias de Garantia</h4>
+        <p>Se algo der errado, eu volto sem custo adicional.</p>
       </div>
-      <div class="vantagem">
-        <h3>🛡️ Todas as Marcas</h3>
-        <p>Trabalhamos com Brastemp, Consul, Electrolux, Samsung, LG e mais.</p>
+      <div class="diferencial-card">
+        <div class="diferencial-icone">⏰</div>
+        <h4>Pontualidade</h4>
+        <p>Chego no horário combinado. Não te deixo esperando.</p>
       </div>
-      <div class="vantagem">
-        <h3>✅ Transparência Total</h3>
-        <p>Explico o problema, mostro a peça, falo o valor antes de começar.</p>
+      <div class="diferencial-card">
+        <div class="diferencial-icone">💰</div>
+        <h4>Preço Justo</h4>
+        <p>Valor claro e direto. Sem surpresa na hora de pagar.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Marcas que Trabalhamos</h2>
-    <div class="marcas">
-      Brastemp • Consul • Electrolux • Samsung • LG<br>
-      Panasonic • Gelopar • Metalfrio • Continental e muito mais!
+    <h2 class="section-title">Trabalhamos com Todas as Marcas</h2>
+    <div class="marcas-box">
+      Brastemp • Consul • Electrolux • Samsung • LG • Panasonic • Gelopar • Metalfrio • e muito mais!
     </div>
   </section>
 
   <section>
-    <h2>Nossos Serviços</h2>
-    <div class="grade-servicos">
-      <div class="servico">
-        <div class="icone">🧊</div>
-        <h3>Geladeira</h3>
-        <p>Não gela, faz barulho, congela demais, vazamento de água, não liga, luz acesa e parada.</p>
+    <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+    <div class="avaliacoes-grid">
+      <div class="avaliacao-card">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <h4 class="nome">Maria Silva</h4>
+        <p class="texto">Chegou rápido, consertou minha geladeira no mesmo dia. Preço justo e trabalho limpo. Recomendo demais!</p>
+        <p class="origem">Avaliado no Google</p>
       </div>
-      <div class="servico">
-        <div class="icone">❄️</div>
-        <h3>Freezer</h3>
-        <p>Horizontal e vertical. Não baixa temperatura, acumula gelo, porta não fecha, goteja.</p>
+      <div class="avaliacao-card">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <h4 class="nome">João Costa</h4>
+        <p class="texto">Profissional de verdade. Explicou direitinho o que estava acontecendo e resolveu o problema de primeira.</p>
+        <p class="origem">Avaliado no Google</p>
       </div>
-      <div class="servico">
-        <div class="icone">🍺</div>
-        <h3>Cervejeira</h3>
-        <p>Regulagem de temperatura, limpeza, troca de peça, não gela, barulho estranho.</p>
-      </div>
-      <div class="servico">
-        <div class="icone">🏪</div>
-        <h3>Expositor Comercial</h3>
-        <p>Vitrine, expositor, Gelopar, Metalfrio. Refrigeração para loja e comércio.</p>
-      </div>
-      <div class="servico">
-        <div class="icone">🔧</div>
-        <h3>Peças e Instalação</h3>
-        <p>Motor, termostato, gás, vedação, placa. Conserto direto na casa do cliente.</p>
-      </div>
-      <div class="servico">
-        <div class="icone">🛡️</div>
-        <h3>Garantia + Orçamento</h3>
-        <p>Orçamento grátis! Se não resolver, não paga. 90 dias de garantia.</p>
+      <div class="avaliacao-card">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <h4 class="nome">Ana Carolina</h4>
+        <p class="texto">Atendimento nota 10! Pontual, educado e consertou minha cervejeira que ninguém conseguia.</p>
+        <p class="origem">Avaliado no Google</p>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 30px;">
-      <a href="https://wa.me/5531973624049" target="_blank" class="botao">📅 Agende sua visita técnica</a>
+  </section>
+
+  <section class="perguntas">
+    <h2 class="section-title">Dúvidas Comuns</h2>
+    <div class="container" style="max-width: 800px;">
+      <div class="pergunta-item">
+        <p class="pergunta">📍 Vocês atendem onde?</p>
+        <p class="resposta">Belo Horizonte e região num raio de 50 km.</p>
+      </div>
+      <div class="pergunta-item observacao">
+        <p class="pergunta">💰 Cobra taxa de visita?</p>
+        <p class="resposta">Taxa de deslocamento do técnico R$ 50,00. Caso o orçamento seja aprovado, o valor não é cobrado.</p>
+      </div>
+      <div class="pergunta-item">
+        <p class="pergunta">⏰ Quando chega?</p>
+        <p class="resposta">Atendimento no mesmo dia ou no dia seguinte, conforme disponibilidade.</p>
+      </div>
+      <div class="pergunta-item">
+        <p class="pergunta">📦 Tem peça na hora?</p>
+        <p class="resposta">Tenho as principais comigo. Se precisar de algo específico, aviso o prazo antes.</p>
+      </div>
+      <div class="pergunta-item">
+        <p class="pergunta">🛠️ E se precisar trocar peça?</p>
+        <p class="resposta">Só troco com sua autorização. Te falo o valor e você decide se aprova.</p>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Veja como Trabalhamos</h2>
-    <div class="passos">
-      <div class="passo">
-        <div class="numero">1</div>
-        <h3>Chama no WhatsApp</h3>
-        <p>Conta o que aconteceu, fala a marca e o modelo da sua geladeira.</p>
+    <h2 class="section-title">Fale Conosco</h2>
+    <div class="contato-box">
+      <p class="contato-item">📞 <strong>Ligar: (31) 97362-4049</strong></p>
+      <p class="contato-item">💬 <strong>WhatsApp: (31) 99327-1939</strong></p>
+      <p class="contato-item">⏰ <strong>Segunda a Sábado — 8h às 18h</strong></p>
+      <p class="contato-item">📍 <strong>Belo Horizonte e região — raio de 50 km</strong></p>
+      <div class="botoes-acao">
+        <a href="tel:+5531973624049" class="btn-ligar">📞 Ligar Agora</a>
+        <a href="https://wa.me/5531993271939?text=Ola%2C%20vim%20atraves%20do%20site%20Frio-Tech%2C%20gostaria%20de%20um%20orcamento" target="_blank" class="btn-zap">💬 Chamar no WhatsApp</a>
       </div>
-      <div class="passo">
-        <div class="numero">2</div>
-        <h3>Marcamos a Visita</h3>
-        <p>Vamos até sua casa ou loja no mesmo dia ou no horário combinado.</p>
-      </div>
-      <div class="passo">
-        <div class="numero">3</div>
-        <h3>Resolvemos o Problema</h3>
-        <p>Vejo → explico → dou o preço → conserto → dou garantia. Simples assim!</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="avaliacoes">
-    <h2>O que nossos clientes dizem</h2>
-    <div class="grade-avaliacoes">
-      <div class="avaliacao">
-        <div class="estrelas">⭐⭐⭐⭐⭐</div>
-        <p>"Consertou minha geladeira que ninguém conseguia. Técnico entende mesmo do assunto! Rápido e preço justo."</p>
-        <p class="nome-cliente">— Mariana Silva</p>
-        <p class="origem">Google • Belo Horizonte</p>
-      </div>
-      <div class="avaliacao">
-        <div class="estrelas">⭐⭐⭐⭐⭐</div>
-        <p>"Meu freezer parou de gelar, chamei e em poucas horas já estava funcionando. Atendimento rápido e honesto!"</p>
-        <p class="nome-cliente">— Carlos Pereira</p>
-        <p class="origem">Google • Belo Horizonte</p>
-      </div>
-      <div class="avaliacao">
-        <div class="estrelas">⭐⭐⭐⭐⭐</div>
-        <p>"Melhor assistência de BH! Consertou minha cervejeira que ninguém resolvia. Recomendo demais!"</p>
-        <p class="nome-cliente">— Juliana Costa</p>
-        <p class="origem">Google • Belo Horizonte</p>
-      </div>
-      <div class="avaliacao">
-        <div class="estrelas">⭐⭐⭐⭐⭐</div>
-        <p>"Minha geladeira parou do nada, eles arrumaram na hora. Explicou tudo direitinho sem complicar."</p>
-        <p class="nome-cliente">— Roberto Nascimento</p>
-        <p class="origem">Google • Belo Horizonte</p>
-      </div>
-      <div class="avaliacao">
-        <div class="estrelas">⭐⭐⭐⭐⭐</div>
-        <p>"Consertou o expositor da minha loja e salvou meus produtos! Rápido, competente e preço justo."</p>
-        <p class="nome-cliente">— Fernanda Lima</p>
-        <p class="origem">Google • Belo Horizonte</p>
-      </div>
-      <div class="avaliacao">
-        <div class="estrelas">⭐⭐⭐⭐⭐</div>
-        <p>"Técnico muito honesto! Arrumou sem trocar peça à toa. Minha geladeira tá nova de novo!"</p>
-        <p class="nome-cliente">— Antônio Gomes</p>
-        <p class="origem">Google • Belo Horizonte</p>
-      </div>
-    </div>
-    <div style="text-align: center; margin-top: 30px;">
-      <a href="https://wa.me/5531973624049" target="_blank" class="botao">💬 Faça seu orçamento pelo WhatsApp</a>
-    </div>
-  </section>
-
-  <section>
-    <h2>Informações de Contato</h2>
-    <div class="contato">
-      <p><strong>📍 Atendimento:</strong> Belo Horizonte e Região — MG</p>
-      <p><strong>📞 WhatsApp:</strong> (31) 97362-4049</p>
-      <p><strong>⏰ Horário:</strong> Segunda a Sexta — 8h às 18h | Sábado — 8h às 13h</p>
-      <a href="https://wa.me/5531973624049" target="_blank" class="botao">💬 Chamar no WhatsApp Agora</a>
     </div>
   </section>
 
   <footer>
-    <p><strong>❄️ FRIO TEC BH — Refrigeração e Assistência Técnica</strong></p>
-    <p>Manutenção e conserto de geladeiras, freezer, cervejeira e expositor</p>
-    <p>📞 (31) 97362-4049 | Belo Horizonte — MG</p>
-    <p>© 2026 Frio Tec BH — Todos os direitos reservados</p>
+    <p class="nome-rodape">❄️ FRIO-TECH</p>
+    <p>Assistência Técnica em Refrigeração — Geladeira • Freezer • Cervejeiro • Expositor • Frigobar</p>
+    <p>Atendimento em Belo Horizonte e região — raio de 50 km</p>
+    <p style="margin-top: 15px; font-size: 14px;">📞 Ligar: (31) 97362-4049 | 💬 WhatsApp: (31) 99327-1939</p>
+    <p style="margin-top: 10px; font-size: 14px;">Taxa de deslocamento R$ 50,00 — isenta se aprovar o orçamento</p>
+    <p style="margin-top: 15px; font-size: 13px; opacity: 0.7;">© 2026 — Todos os direitos reservados | 90 dias de garantia em todos os serviços</p>
   </footer>
+
+  <a href="https://wa.me/5531993271939?text=Ola%2C%20vim%20atraves%20do%20site%20Frio-Tech%2C%20gostaria%20de%20um%20orcamento" target="_blank" class="whatsapp-fixo">💬</a>
 
 </body>
 </html>
