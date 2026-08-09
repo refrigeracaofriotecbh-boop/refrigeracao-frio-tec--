@@ -35,7 +35,9 @@
 
     header.main-header { background: #f8fafc; padding: 30px 0; text-align: center; border-bottom: 3px solid #2563eb; }
     .logo { font-size: 32px; font-weight: 900; color: #2563eb; text-decoration: none; display: inline-block; margin-bottom: 8px; }
-    .subtitulo { font-size: 18px; color: #475569; margin-bottom: 20px; }
+    .subtitulo { font-size: 17px; color: #475569; margin-bottom: 15px; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .regioes { font-size: 14px; color: #64748b; margin-top: 10px; line-height: 1.7; }
+    .cidade { font-weight: bold; color: #2563eb; }
 
     .botoes-acao { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 20px 0; }
     .btn-ligar { background: #2563eb; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 18px; }
@@ -102,6 +104,7 @@
       .section-title { font-size: 26px; }
       .btn-ligar, .btn-zap { padding: 12px 24px; font-size: 16px; }
       .barra-conteudo { justify-content: center; }
+      .regioes { font-size: 13px; }
     }
   </style>
 </head>
@@ -119,6 +122,20 @@
     <div class="container">
       <a href="#" class="logo">❄️ FRIO-TECH</a>
       <p class="subtitulo"><strong>Assistência Técnica em Refrigeração</strong><br>Atendemos Belo Horizonte e região — raio de 50 km</p>
+      
+      <div class="regioes">
+        <span class="cidade">Belo Horizonte:</span> Centro, Barreiro, Pampulha, Venda Nova, Ouro Preto, São Vicente, Floresta, São Cristóvão, Carlos Prates, Cachoeirinha, Glória, Gutierrez, Savassi, Lourdes, Santo Antônio, São Bento, Nova Esperança e outros bairros<br>
+        <span class="cidade">Contagem:</span> Centro, Eldorado, Água Branca, Cabral, Amazonas, Bairro das Indústrias, Cidade Industrial, Riacho das Pedras, Novo Eldorado, Jardim Laguna<br>
+        <span class="cidade">Betim:</span> Centro, Ingá, Citrolândia, Jardim das Alterosas, Iguaçu, São Caetano, Santa Cruz, Petrópolis, Distrito Industrial<br>
+        <span class="cidade">Ribeirão das Neves:</span> Centro, Jardim Petrópolis, Veneza, Industrial, São Cristóvão, Santa Helena, Marajó, Liberdade<br>
+        <span class="cidade">Santa Luzia:</span> Centro, São Benedito, Vila Monsenhor, São Vicente, Frimisa, Palmital, Nossa Senhora de Fátima<br>
+        <span class="cidade">Vespasiano:</span> Centro, Jardim Aeroporto, Vila Esperança, São José, Industrial, Santa Rosa<br>
+        <span class="cidade">Sabará:</span> Centro, Santa Tereza, Caetano Furquim, Nossa Senhora de Fátima, Vila dos Ipês<br>
+        <span class="cidade">Nova Lima:</span> Centro, Vila Del Rey, Jardim Canadá, Bela Vista, Vale do Sol, Alphaville<br>
+        <span class="cidade">Igarapé:</span> Centro, São Geraldo, Vila Nova, São Vicente, Jardim América<br>
+        <span class="cidade">Brumadinho:</span> Centro, Parque das Águas, São José, Vila Domingos, Santa Luzia<br>
+        <span class="cidade">Raposos, Ibirité, Esmeraldas, Capim Branco, Pedro Leopoldo</span> e toda a região
+      </div>
       
       <div class="botoes-acao">
         <a href="tel:+5531973624049" class="btn-ligar">📞 Ligar Agora</a>
@@ -239,7 +256,7 @@
     <div class="container" style="max-width: 800px;">
       <div class="pergunta-item">
         <p class="pergunta">📍 Vocês atendem onde?</p>
-        <p class="resposta">Belo Horizonte e região num raio de 50 km.</p>
+        <p class="resposta">Belo Horizonte, Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Sabará, Nova Lima, Igarapé, Brumadinho e toda a região num raio de 50 km.</p>
       </div>
       <div class="pergunta-item observacao">
         <p class="pergunta">💰 Cobra taxa de visita?</p>
@@ -266,7 +283,7 @@
       <p class="contato-item">📞 <strong>Ligar: (31) 97362-4049</strong></p>
       <p class="contato-item">💬 <strong>WhatsApp: (31) 99327-1939</strong></p>
       <p class="contato-item">⏰ <strong>Segunda a Sábado — 8h às 18h</strong></p>
-      <p class="contato-item">📍 <strong>Belo Horizonte e região — raio de 50 km</strong></p>
+      <p class="contato-item">📍 <strong>Atendimento em BH, Contagem, Betim, Brumadinho e região — raio de 50 km</strong></p>
       <div class="botoes-acao">
         <a href="tel:+5531973624049" class="btn-ligar">📞 Ligar Agora</a>
         <a href="https://wa.me/5531993271939?text=Ola%2C%20vim%20atraves%20do%20site%20Frio-Tech%2C%20gostaria%20de%20um%20orcamento" target="_blank" class="btn-zap">💬 Chamar no WhatsApp</a>
@@ -277,7 +294,7 @@
   <footer>
     <p class="nome-rodape">❄️ FRIO-TECH</p>
     <p>Assistência Técnica em Refrigeração — Geladeira • Freezer • Cervejeiro • Expositor • Frigobar</p>
-    <p>Atendimento em Belo Horizonte e região — raio de 50 km</p>
+    <p>📍 Atendimento em Belo Horizonte, Contagem, Betim, Brumadinho e região — raio de 50 km</p>
     <p style="margin-top: 15px; font-size: 14px;">📞 Ligar: (31) 97362-4049 | 💬 WhatsApp: (31) 99327-1939</p>
     <p style="margin-top: 10px; font-size: 14px;">Taxa de deslocamento R$ 50,00 — isenta se aprovar o orçamento</p>
     <p style="margin-top: 15px; font-size: 13px; opacity: 0.7;">© 2026 — Todos os direitos reservados | 90 dias de garantia em todos os serviços</p>
