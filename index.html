@@ -3,304 +3,317 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frio-Tech | Assistência Técnica em Refrigeração — BH e região</title>
+  <title>Frio-Tech BH | Assistência Técnica de Refrigeração</title>
 
-<!-- Google Tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18343011161"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18343011161');
-</script>
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18343011161/NIFMCI25_90cENnG0KpE',
-      'value': 1.0,
-      'currency': 'BRL'
-  });
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18379840229"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18379840229');
+  </script>
+
+  <!-- Event snippet for Visualização de página conversion page -->
+  <script>
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18379840229/SuI_CNa88d4cEOW1mLxE',
+        'value': 1.0,
+        'currency': 'BRL'
+    });
+  </script>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
-    body { color: #222; line-height: 1.6; background: #ffffff; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    body { color: #000000; line-height: 1.7; background: #ffffff; font-size: 20px; padding-top: 140px; font-weight: 500; }
+    .container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
 
-    /* Barra fixa no topo */
-    .barra-superior { background: #000000; color: white; padding: 10px 0; position: sticky; top: 0; z-index: 1000; }
-    .barra-conteudo { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .telefone-topo { color: #60a5fa; text-decoration: none; font-weight: bold; font-size: 16px; }
-    .btn-zap-topo { background: #22c55e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; }
-    .btn-zap-topo:hover { background: #16a34a; }
+    .top-buttons-bar { position: fixed; top: 0; left: 0; width: 100%; background: #000000; padding: 12px 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; z-index: 1000; box-shadow: 0 3px 12px rgba(0,0,0,0.25); }
+    .btn-ws-top { background: #00b33c; color: #ffffff; padding: 14px 30px; border-radius: 6px; text-decoration: none; font-weight: 900; font-size: 18px; box-shadow: 0 3px 10px rgba(0,179,60,0.35); border: 2px solid #00d647; }
+    .btn-ws-top:hover { background: #008f30; }
+    .btn-call-top { background: #e60000; color: #ffffff; padding: 14px 30px; border-radius: 6px; text-decoration: none; font-weight: 900; font-size: 18px; box-shadow: 0 3px 10px rgba(230,0,0,0.35); border: 2px solid #ff1a1a; }
+    .btn-call-top:hover { background: #cc0000; }
 
-    header.main-header { background: #f8fafc; padding: 30px 0; text-align: center; border-bottom: 3px solid #2563eb; }
-    .logo { font-size: 32px; font-weight: 900; color: #2563eb; text-decoration: none; display: inline-block; margin-bottom: 8px; }
-    .subtitulo { font-size: 17px; color: #475569; margin-bottom: 15px; max-width: 900px; margin-left: auto; margin-right: auto; }
-    .regioes { font-size: 14px; color: #64748b; margin-top: 10px; line-height: 1.7; }
-    .cidade { font-weight: bold; color: #2563eb; }
+    header { background: #000000; color: #ffffff; padding: 25px 20px 15px; text-align: center; border-bottom: 3px solid #ff0000; }
+    header h1 { font-size: 32px; margin-bottom: 8px; font-weight: 900; }
+    header p { font-size: 19px; opacity: 1; font-weight: 600; }
 
-    .botoes-acao { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 20px 0; }
-    .btn-ligar { background: #2563eb; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 18px; }
-    .btn-ligar:hover { background: #1d4ed8; }
-    .btn-zap { background: #22c55e; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 18px; }
-    .btn-zap:hover { background: #16a34a; }
+    nav { background: #f0f0f0; padding: 14px; text-align: center; position: sticky; top: 65px; z-index: 999; border-bottom: 2px solid #cccccc; }
+    nav a { color: #000000; text-decoration: none; margin: 0 12px; font-weight: 700; font-size: 17px; }
+    nav a:hover { color: #cc0000; text-decoration: underline; }
 
-    section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
-    .section-title { text-align: center; font-size: 30px; color: #1e293b; margin-bottom: 40px; font-weight: 800; position: relative; }
-    .section-title:after { content: ''; display: block; width: 70px; height: 4px; background: #2563eb; margin: 12px auto 0; border-radius: 2px; }
+    h2 { font-size: 28px; margin: 50px 0 25px; padding-bottom: 10px; border-bottom: 3px solid #ff0000; display: inline-block; color: #cc0000; font-weight: 900; }
+    h3 { font-size: 22px; margin: 28px 0 15px; color: #000000; font-weight: 800; }
+    .coverage { background: #f8f8f8; padding: 25px; border-radius: 10px; margin: 25px 0; border: 2px solid #dddddd; }
+    .coverage p { margin-bottom: 12px; color: #111111; font-weight: 500; }
+    .service-item { margin: 28px 0; padding: 18px 20px; background: #f9f9f9; border-radius: 8px; border-left: 5px solid #00b33c; }
+    .service-item h3 { margin-top: 0; }
+    .service-item p { color: #222222; font-weight: 500; }
+    .check-item { margin: 12px 0; padding: 8px 5px; color: #000000; font-weight: 600; font-size: 20px; }
+    .testimonial { background: #f9f9f9; padding: 22px; border-radius: 10px; margin: 18px 0; border-left: 5px solid #ff0000; border: 2px solid #eeeeee; }
+    .stars { color: #e69500; margin-bottom: 10px; font-size: 24px; }
+    .testimonial strong { font-size: 19px; color: #000000; }
+    .testimonial p { color: #222222; margin-top: 8px; }
+    .faq { margin: 35px 0; }
+    .faq-item { margin-bottom: 25px; padding: 15px; background: #f9f9f9; border-radius: 8px; }
+    .faq-question { font-weight: 900; margin-bottom: 8px; color: #000000; font-size: 20px; }
+    .faq-item p { color: #222222; padding: 0 10px; }
+    .contact-box { background: #000000; color: #ffffff; padding: 30px 25px; border-radius: 10px; text-align: center; margin-top: 50px; border: 3px solid #ff0000; }
+    .contact-box p { margin: 10px 0; font-size: 19px; font-weight: 600; }
 
-    /* Serviços */
-    .servicos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-    .servico-card { background: #ffffff; border: 2px solid #e2e8f0; padding: 30px 20px; border-radius: 16px; text-align: center; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
-    .servico-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(37,99,235,0.15); border-color: #2563eb; }
-    .servico-icone { font-size: 60px; margin-bottom: 15px; }
-    .servico-card h3 { font-size: 22px; color: #1e293b; margin-bottom: 10px; font-weight: 700; }
-    .servico-card p { color: #64748b; }
+    .payment-box { max-width: 500px; margin: 50px auto; padding: 35px 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.12); text-align: center; border-top: 5px solid #00b33c; border: 2px solid #e0e0e0; }
+    .payment-box h3 { font-size: 23px; margin-bottom: 8px; }
+    .payment-box p { color: #333333; font-size: 16px; margin-bottom: 25px; }
+    .payment-label { font-size: 18px; color: #000000; display: block; margin-bottom: 10px; font-weight: 800; text-align: left; }
+    .payment-input { width: 100%; padding: 16px; font-size: 24px; font-weight: 700; text-align: center; border: 3px solid #cccccc; border-radius: 8px; outline: none; transition: 0.3s; margin-bottom: 22px; }
+    .payment-input:focus { border-color: #00b33c; background: #f9fff9; }
+    .payment-btn { width: 100%; background: #00b33c; color: #ffffff; border: none; padding: 16px; font-size: 18px; font-weight: 900; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,179,60,0.35); transition: 0.3s; }
+    .payment-btn:hover { background: #008f30; }
+    .payment-steps { margin-top: 22px; display: none; text-align: left; background: #f0fff4; padding: 20px; border-radius: 8px; border-left: 5px solid #00b33c; }
+    .payment-steps.show { display: block; }
+    .payment-value { font-weight: 900; color: #008f30; font-size: 20px; }
+    .payment-safe { margin-top: 20px; color: #555555; font-size: 14px; font-weight: 600; }
 
-    /* Problemas Comuns */
-    .problemas { background: #f0f7ff; }
-    .problemas-lista { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-    .problema-item { background: white; padding: 15px 20px; border-radius: 10px; font-size: 17px; display: flex; align-items: center; gap: 10px; }
-    .problema-item span { color: #22c55e; font-weight: bold; font-size: 20px; }
+    .whatsapp-fixo { position: fixed; bottom: 25px; right: 25px; background: #00b33c; color: #ffffff; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,179,60,0.4); z-index: 999; border: 3px solid #ffffff; }
 
-    /* Diferenciais */
-    .diferenciais-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
-    .diferencial-card { text-align: center; padding: 25px; }
-    .diferencial-icone { font-size: 40px; margin-bottom: 12px; }
-    .diferencial-card h4 { font-size: 18px; margin-bottom: 8px; color: #1e293b; }
-    .diferencial-card p { color: #64748b; font-size: 15px; }
+    footer { background: #000000; color: #ffffff; padding: 30px 25px; text-align: center; margin-top: 60px; border-top: 4px solid #ff0000; font-size: 16px; font-weight: 600; }
+    footer p { margin: 8px 0; opacity: 0.95; }
 
-    /* Marcas */
-    .marcas-box { background: #000000; color: white; padding: 35px; border-radius: 16px; text-align: center; font-size: 19px; line-height: 1.8; }
-
-    /* Avaliações */
-    .avaliacoes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-    .avaliacao-card { background: #ffffff; border: 2px solid #e2e8f0; padding: 25px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
-    .estrelas { color: #f59e0b; font-size: 20px; margin-bottom: 10px; }
-    .nome { font-weight: 800; color: #1e293b; margin: 8px 0 4px; font-size: 17px; }
-    .texto { color: #475569; font-size: 16px; line-height: 1.6; }
-    .origem { margin-top: 12px; font-size: 13px; color: #94a3b8; font-style: italic; }
-
-    /* Perguntas */
-    .perguntas { background: #f8fafc; }
-    .pergunta-item { background: white; padding: 20px 25px; border-radius: 12px; margin-bottom: 12px; border-left: 4px solid #2563eb; }
-    .pergunta { font-weight: bold; font-size: 17px; margin-bottom: 8px; color: #1e293b; }
-    .resposta { color: #475569; font-size: 16px; }
-    .observacao { background: #fffbeb; border-left-color: #f59e0b; }
-
-    /* Contato */
-    .contato-box { background: #000000; color: white; padding: 45px 35px; border-radius: 16px; text-align: center; }
-    .contato-item { font-size: 20px; margin: 15px 0; }
-    .contato-item strong { color: #93c5fd; }
-
-    footer { background: #0f172a; color: white; padding: 50px 20px 30px; text-align: center; }
-    footer p { margin-bottom: 10px; opacity: 0.8; font-size: 16px; }
-    .nome-rodape { font-size: 22px; font-weight: 900; margin-bottom: 15px; opacity: 1; color: #93c5fd; }
-
-    .whatsapp-fixo { position: fixed; bottom: 25px; right: 25px; background: #22c55e; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 5px 20px rgba(34,197,94,0.5); z-index: 999; transition: transform 0.2s; }
-    .whatsapp-fixo:hover { transform: scale(1.1); }
+    .marcas-box { font-size: 22px; text-align: center; padding: 20px; background: #f9f9f9; border-radius: 10px; border: 2px solid #e0e0e0; font-weight: 700; color: #000000; line-height: 1.8; }
 
     @media(max-width: 768px) {
-      .section-title { font-size: 26px; }
-      .btn-ligar, .btn-zap { padding: 12px 24px; font-size: 16px; }
-      .barra-conteudo { justify-content: center; }
-      .regioes { font-size: 13px; }
+      nav a { display: inline-block; margin: 8px 10px; }
+      body { font-size: 18px; padding-top: 130px; }
+      .top-buttons-bar { gap: 12px; }
+      .btn-ws-top, .btn-call-top { padding: 12px 20px; font-size: 16px; }
+      h2 { font-size: 24px; }
+      h3 { font-size: 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Barra fixa no topo -->
-  <div class="barra-superior">
-    <div class="container barra-conteudo">
-      <a href="tel:+5531973624049" class="telefone-topo">📞 (31) 97362-4049</a>
-      <a href="https://wa.me/5531993271939?text=Ola%2C%20vim%20atraves%20do%20site%20Frio-Tech%2C%20gostaria%20de%20um%20orcamento" target="_blank" class="btn-zap-topo">💬 Chamar no WhatsApp</a>
-    </div>
+  <!-- BOTÕES FIXADOS NO TOPO — NUNCA SOMEM! -->
+  <div class="top-buttons-bar">
+    <a href="https://wa.me/5531973624049" target="_blank" class="btn-ws-top">💬 WhatsApp</a>
+    <a href="tel:+5531973624049" class="btn-call-top">📞 Ligar Agora</a>
   </div>
 
-  <header class="main-header">
-    <div class="container">
-      <a href="#" class="logo">❄️ FRIO-TECH</a>
-      <p class="subtitulo"><strong>Assistência Técnica em Refrigeração</strong><br>Atendemos Belo Horizonte e região — raio de 50 km</p>
-      
-      <div class="regioes">
-        <span class="cidade">Belo Horizonte:</span> Centro, Barreiro, Pampulha, Venda Nova, Ouro Preto, São Vicente, Floresta, São Cristóvão, Carlos Prates, Cachoeirinha, Glória, Gutierrez, Savassi, Lourdes, Santo Antônio, São Bento, Nova Esperança e outros bairros<br>
-        <span class="cidade">Contagem:</span> Centro, Eldorado, Água Branca, Cabral, Amazonas, Bairro das Indústrias, Cidade Industrial, Riacho das Pedras, Novo Eldorado, Jardim Laguna<br>
-        <span class="cidade">Betim:</span> Centro, Ingá, Citrolândia, Jardim das Alterosas, Iguaçu, São Caetano, Santa Cruz, Petrópolis, Distrito Industrial<br>
-        <span class="cidade">Ribeirão das Neves:</span> Centro, Jardim Petrópolis, Veneza, Industrial, São Cristóvão, Santa Helena, Marajó, Liberdade<br>
-        <span class="cidade">Santa Luzia:</span> Centro, São Benedito, Vila Monsenhor, São Vicente, Frimisa, Palmital, Nossa Senhora de Fátima<br>
-        <span class="cidade">Vespasiano:</span> Centro, Jardim Aeroporto, Vila Esperança, São José, Industrial, Santa Rosa<br>
-        <span class="cidade">Sabará:</span> Centro, Santa Tereza, Caetano Furquim, Nossa Senhora de Fátima, Vila dos Ipês<br>
-        <span class="cidade">Nova Lima:</span> Centro, Vila Del Rey, Jardim Canadá, Bela Vista, Vale do Sol, Alphaville<br>
-        <span class="cidade">Igarapé:</span> Centro, São Geraldo, Vila Nova, São Vicente, Jardim América<br>
-        <span class="cidade">Brumadinho:</span> Centro, Parque das Águas, São José, Vila Domingos, Santa Luzia<br>
-        <span class="cidade">Raposos, Ibirité, Esmeraldas, Capim Branco, Pedro Leopoldo</span> e toda a região
-      </div>
-      
-      <div class="botoes-acao">
-        <a href="tel:+5531973624049" class="btn-ligar">📞 Ligar Agora</a>
-        <a href="https://wa.me/5531993271939?text=Ola%2C%20vim%20atraves%20do%20site%20Frio-Tech%2C%20gostaria%20de%20um%20orcamento" target="_blank" class="btn-zap">💬 Chamar no WhatsApp</a>
-      </div>
-    </div>
+  <header>
+    <h1>❄️ FRIO-TECH BH</h1>
+    <p><strong>ASSISTÊNCIA TÉCNICA EM REFRIGERAÇÃO</strong></p>
+    <p>📍 Atendemos BH e região — raio de 50 km</p>
   </header>
 
-  <section>
-    <h2 class="section-title">Nossos Serviços</h2>
-    <div class="servicos-grid">
-      <div class="servico-card">
-        <div class="servico-icone">🧊</div>
-        <h3>Manutenção de Geladeira</h3>
-        <p>Conserto e manutenção de todos os modelos e marcas</p>
-      </div>
-      <div class="servico-card">
-        <div class="servico-icone">❄️</div>
-        <h3>Manutenção de Freezer</h3>
-        <p>Não gela, para de funcionar, faz barulho — resolvemos</p>
-      </div>
-      <div class="servico-card">
-        <div class="servico-icone">🍺</div>
-        <h3>Manutenção de Cervejeiro</h3>
-        <p>Limpeza, reparos e recarga de gás</p>
-      </div>
-      <div class="servico-card">
-        <div class="servico-icone">🏪</div>
-        <h3>Expositor / Frigobar</h3>
-        <p>Conserto para residência e comércio</p>
-      </div>
-    </div>
-  </section>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#cobertura">Atendimento</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#problemas">Problemas</a>
+    <a href="#vantagens">Vantagens</a>
+    <a href="#marcas">Marcas</a>
+    <a href="#avaliacoes">Avaliações</a>
+    <a href="#pagamento">Pagamento</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-  <section class="problemas">
-    <h2 class="section-title">Problemas que Resolvemos</h2>
-    <div class="problemas-lista">
-      <div class="problema-item"><span>✅</span> Geladeira não gela</div>
-      <div class="problema-item"><span>✅</span> Faz muito gelo ou não faz gelo</div>
-      <div class="problema-item"><span>✅</span> Vaza água no chão</div>
-      <div class="problema-item"><span>✅</span> Faz barulho estranho</div>
-      <div class="problema-item"><span>✅</span> Não liga ou desliga sozinha</div>
-      <div class="problema-item"><span>✅</span> Luz acende mas não gela</div>
-      <div class="problema-item"><span>✅</span> Geladeira gasta muita energia</div>
-      <div class="problema-item"><span>✅</span> Congela em cima e não embaixo</div>
-    </div>
-  </section>
+  <div class="container" id="inicio">
 
-  <section>
-    <h2 class="section-title">Por que Escolher a Frio-Tech?</h2>
-    <div class="diferenciais-grid">
-      <div class="diferencial-card">
-        <div class="diferencial-icone">📝</div>
-        <h4>Orçamento Gratuito</h4>
-        <p>Taxa de deslocamento do técnico R$ 50,00. Se o orçamento for aprovado, não é cobrada.</p>
-      </div>
-      <div class="diferencial-card">
-        <div class="diferencial-icone">🚚</div>
-        <h4>Atendimento em Domicílio</h4>
-        <p>Vou até você em BH e região — raio de 50 km.</p>
-      </div>
-      <div class="diferencial-card">
-        <div class="diferencial-icone">🔧</div>
-        <h4>Peças Originais</h4>
-        <p>Só troco peça com sua autorização prévia.</p>
-      </div>
-      <div class="diferencial-card">
-        <div class="diferencial-icone">🛡️</div>
-        <h4>90 Dias de Garantia</h4>
-        <p>Se algo der errado, eu volto sem custo adicional.</p>
-      </div>
-      <div class="diferencial-card">
-        <div class="diferencial-icone">⏰</div>
-        <h4>Pontualidade</h4>
-        <p>Chego no horário combinado. Não te deixo esperando.</p>
-      </div>
-      <div class="diferencial-card">
-        <div class="diferencial-icone">💰</div>
-        <h4>Preço Justo</h4>
-        <p>Valor claro e direto. Sem surpresa na hora de pagar.</p>
-      </div>
+    <div class="coverage" id="cobertura">
+      <h3>📍 ATENDEMOS EM TODA A REGIÃO:</h3>
+      <p><strong>Belo Horizonte:</strong> Centro, Barreiro, Pampulha, Venda Nova, Ouro Preto, São Vicente, Floresta, São Cristóvão, Carlos Prates, Cachoeirinha, Glória, Gutierrez, Savassi, Lourdes, Santo Antônio, São Bento, Nova Esperança e outros bairros</p>
+      <p><strong>Contagem:</strong> Centro, Eldorado, Água Branca, Cabral, Amazonas, Bairro das Indústrias, Cidade Industrial, Riacho das Pedras, Novo Eldorado, Jardim Laguna</p>
+      <p><strong>Betim:</strong> Centro, Ingá, Citrolândia, Jardim das Alterosas, Iguaçu, São Caetano, Santa Cruz, Petrópolis, Distrito Industrial</p>
+      <p><strong>Ribeirão das Neves:</strong> Centro, Jardim Petrópolis, Veneza, Industrial, São Cristóvão, Santa Helena, Marajó, Liberdade</p>
+      <p><strong>Santa Luzia:</strong> Centro, São Benedito, Vila Monsenhor, São Vicente, Frimisa, Palmital, Nossa Senhora de Fátima</p>
+      <p><strong>Vespasiano:</strong> Centro, Jardim Aeroporto, Vila Esperança, São José, Industrial, Santa Rosa</p>
+      <p><strong>Sabará:</strong> Centro, Santa Tereza, Caetano Furquim, Nossa Senhora de Fátima, Vila dos Ipês</p>
+      <p><strong>Nova Lima:</strong> Centro, Vila Del Rey, Jardim Canadá, Bela Vista, Vale do Sol, Alphaville</p>
+      <p><strong>Igarapé:</strong> Centro, São Geraldo, Vila Nova, São Vicente, Jardim América</p>
+      <p><strong>Brumadinho:</strong> Centro, Parque das Águas, São José, Vila Domingos, Santa Luzia</p>
+      <p><strong>Raposos, Ibirité, Esmeraldas, Capim Branco, Pedro Leopoldo e toda a região</strong></p>
     </div>
-  </section>
 
-  <section>
-    <h2 class="section-title">Trabalhamos com Todas as Marcas</h2>
+    <h2 id="servicos">NOSSOS SERVIÇOS</h2>
+
+    <div class="service-item">
+      <h3>🧊 MANUTENÇÃO DE GELADEIRA</h3>
+      <p>Conserto e manutenção de todos os modelos e marcas — Frost Free, convencional, inverter</p>
+    </div>
+
+    <div class="service-item">
+      <h3>❄️ MANUTENÇÃO DE FREEZER</h3>
+      <p>Horizontal e vertical. Não gela, para de funcionar, faz barulho — resolvemos na hora</p>
+    </div>
+
+    <div class="service-item">
+      <h3>🍺 MANUTENÇÃO DE CERVEJEIRO</h3>
+      <p>Limpeza, reparos, recarga de gás e termostato. Equipamentos de bar e loja</p>
+    </div>
+
+    <div class="service-item">
+      <h3>🏪 EXPOSITOR / FRIGOBAR</h3>
+      <p>Conserto para residência, hotel e comércio. Todas as marcas e modelos</p>
+    </div>
+
+    <h2 id="problemas">PROBLEMAS QUE RESOLVEMOS</h2>
+    <div class="check-item">✅ Geladeira não gela</div>
+    <div class="check-item">✅ Faz muito gelo ou não faz gelo</div>
+    <div class="check-item">✅ Vaza água no chão</div>
+    <div class="check-item">✅ Faz barulho estranho</div>
+    <div class="check-item">✅ Não liga ou desliga sozinha</div>
+    <div class="check-item">✅ Luz acende mas não gela</div>
+    <div class="check-item">✅ Geladeira gasta muita energia</div>
+    <div class="check-item">✅ Congela em cima e não embaixo</div>
+
+    <h2 id="vantagens">POR QUE ESCOLHER A FRIO-TECH?</h2>
+
+    <div class="service-item">
+      <h3>📝 ORÇAMENTO GRATUITO</h3>
+      <p>Taxa de deslocamento do técnico R$ 50,00. Se aprovar o orçamento, não cobramos a taxa.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>🚚 ATENDIMENTO EM DOMICÍLIO</h3>
+      <p>Vou até você em BH e região — raio de 50 km. Sem dor de cabeça!</p>
+    </div>
+
+    <div class="service-item">
+      <h3>🔧 PEÇAS ORIGINAIS</h3>
+      <p>Só troco peça com sua autorização prévia. Te falo o valor antes de qualquer coisa.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>🛡️ 90 DIAS DE GARANTIA</h3>
+      <p>Se algo der errado, eu volto sem custo adicional. Fica tranquilo!</p>
+    </div>
+
+    <div class="service-item">
+      <h3>⏰ PONTUALIDADE</h3>
+      <p>Chego no horário combinado. Não te deixo esperando o dia todo!</p>
+    </div>
+
+    <div class="service-item">
+      <h3>💰 PREÇO JUSTO</h3>
+      <p>Valor claro e direto. Sem surpresa na hora de pagar. Sem pegadinha!</p>
+    </div>
+
+    <h2 id="marcas">TRABALHAMOS COM TODAS AS MARCAS</h2>
     <div class="marcas-box">
       Brastemp • Consul • Electrolux • Samsung • LG • Panasonic • Gelopar • Metalfrio • e muito mais!
     </div>
-  </section>
 
-  <section>
-    <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
-    <div class="avaliacoes-grid">
-      <div class="avaliacao-card">
-        <div class="estrelas">⭐⭐⭐⭐⭐</div>
-        <h4 class="nome">Maria Silva</h4>
-        <p class="texto">Chegou rápido, consertou minha geladeira no mesmo dia. Preço justo e trabalho limpo. Recomendo demais!</p>
-        <p class="origem">Avaliado no Google</p>
+    <h2 id="avaliacoes">O QUE DIZEM NOSSOS CLIENTES</h2>
+
+    <div class="testimonial">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <strong>Maria Silva</strong>
+      <p>Chegou rápido, consertou minha geladeira no mesmo dia. Preço justo e trabalho limpo. Recomendo demais!</p>
+      <p style="margin-top: 8px; font-size: 15px; color: #666666; font-weight: 600;">Avaliado no Google</p>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <strong>João Costa</strong>
+      <p>Profissional de verdade. Explicou direitinho o que estava acontecendo e resolveu o problema de primeira.</p>
+      <p style="margin-top: 8px; font-size: 15px; color: #666666; font-weight: 600;">Avaliado no Google</p>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <strong>Ana Carolina</strong>
+      <p>Atendimento nota 10! Pontual, educado e consertou minha cervejeira que ninguém conseguia.</p>
+      <p style="margin-top: 8px; font-size: 15px; color: #666666; font-weight: 600;">Avaliado no Google</p>
+    </div>
+
+    <h2>DÚVIDAS COMUNS</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-question">📍 Vocês atendem onde?</div>
+        <p>Belo Horizonte, Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Sabará, Nova Lima, Igarapé, Brumadinho e toda a região num raio de 50 km.</p>
       </div>
-      <div class="avaliacao-card">
-        <div class="estrelas">⭐⭐⭐⭐⭐</div>
-        <h4 class="nome">João Costa</h4>
-        <p class="texto">Profissional de verdade. Explicou direitinho o que estava acontecendo e resolveu o problema de primeira.</p>
-        <p class="origem">Avaliado no Google</p>
+
+      <div class="faq-item">
+        <div class="faq-question">💰 Cobra taxa de visita?</div>
+        <p>Taxa de deslocamento do técnico R$ 50,00. Caso aprove o orçamento, o valor não é cobrado.</p>
       </div>
-      <div class="avaliacao-card">
-        <div class="estrelas">⭐⭐⭐⭐⭐</div>
-        <h4 class="nome">Ana Carolina</h4>
-        <p class="texto">Atendimento nota 10! Pontual, educado e consertou minha cervejeira que ninguém conseguia.</p>
-        <p class="origem">Avaliado no Google</p>
+
+      <div class="faq-item">
+        <div class="faq-question">⏰ Quando chega?</div>
+        <p>Atendimento no mesmo dia ou no dia seguinte, conforme disponibilidade.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">📦 Tem peça na hora?</div>
+        <p>Tenho as principais comigo. Se precisar de algo específico, aviso o prazo antes.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">🛠️ E se precisar trocar peça?</div>
+        <p>Só troco com sua autorização. Te falo o valor e você decide se aprova.</p>
       </div>
     </div>
-  </section>
 
-  <section class="perguntas">
-    <h2 class="section-title">Dúvidas Comuns</h2>
-    <div class="container" style="max-width: 800px;">
-      <div class="pergunta-item">
-        <p class="pergunta">📍 Vocês atendem onde?</p>
-        <p class="resposta">Belo Horizonte, Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Sabará, Nova Lima, Igarapé, Brumadinho e toda a região num raio de 50 km.</p>
-      </div>
-      <div class="pergunta-item observacao">
-        <p class="pergunta">💰 Cobra taxa de visita?</p>
-        <p class="resposta">Taxa de deslocamento do técnico R$ 50,00. Caso o orçamento seja aprovado, o valor não é cobrado.</p>
-      </div>
-      <div class="pergunta-item">
-        <p class="pergunta">⏰ Quando chega?</p>
-        <p class="resposta">Atendimento no mesmo dia ou no dia seguinte, conforme disponibilidade.</p>
-      </div>
-      <div class="pergunta-item">
-        <p class="pergunta">📦 Tem peça na hora?</p>
-        <p class="resposta">Tenho as principais comigo. Se precisar de algo específico, aviso o prazo antes.</p>
-      </div>
-      <div class="pergunta-item">
-        <p class="pergunta">🛠️ E se precisar trocar peça?</p>
-        <p class="resposta">Só troco com sua autorização. Te falo o valor e você decide se aprova.</p>
-      </div>
-    </div>
-  </section>
+    <div class="payment-box" id="pagamento">
+      <h3>💳 EFETUAR PAGAMENTO</h3>
+      <p>Digite o valor combinado e gere o pagamento</p>
 
-  <section>
-    <h2 class="section-title">Fale Conosco</h2>
-    <div class="contato-box">
-      <p class="contato-item">📞 <strong>Ligar: (31) 97362-4049</strong></p>
-      <p class="contato-item">💬 <strong>WhatsApp: (31) 99327-1939</strong></p>
-      <p class="contato-item">⏰ <strong>Segunda a Sábado — 8h às 18h</strong></p>
-      <p class="contato-item">📍 <strong>Atendimento em BH, Contagem, Betim, Brumadinho e região — raio de 50 km</strong></p>
-      <div class="botoes-acao">
-        <a href="tel:+5531973624049" class="btn-ligar">📞 Ligar Agora</a>
-        <a href="https://wa.me/5531993271939?text=Ola%2C%20vim%20atraves%20do%20site%20Frio-Tech%2C%20gostaria%20de%20um%20orcamento" target="_blank" class="btn-zap">💬 Chamar no WhatsApp</a>
+      <label class="payment-label">VALOR EM R$</label>
+      <input type="number" id="valorPagamento" placeholder="0,00" class="payment-input">
+
+      <button onclick="confirmarValor()" class="payment-btn">✅ GERAR INSTRUÇÕES DE PAGAMENTO</button>
+
+      <div id="passosProximo" class="payment-steps">
+        <p style="font-weight: 900; color: #000000; margin-bottom: 10px;">💰 VALOR CONFIRMADO: <span id="valorConfirmado" class="payment-value"></span></p>
+        <p style="font-size: 16px; color: #222222; line-height: 1.8; font-weight: 600;">Agora é só você:<br>
+        1️⃣ Entrar na sua conta da Infinity Pay<br>
+        2️⃣ Clicar em "Criar Cobrança"<br>
+        3️⃣ Digitar o valor: <span id="valorCopiar" class="payment-value"></span><br>
+        4️⃣ Escolher Pix ou Cartão<br>
+        5️⃣ Gerar → mandar o link pro cliente ✅</p>
       </div>
+
+      <p class="payment-safe">🔒 Pagamento seguro pela Infinity Pay — Pix ou Cartão</p>
     </div>
-  </section>
+
+    <div class="contact-box" id="contato">
+      <h3 style="color:#ffffff; margin-bottom:18px; font-size:24px; font-weight:900;">FALE CONOSCO</h3>
+      <p>📞 LIGAR: (31) 97362-4049</p>
+      <p>💬 WHATSAPP: (31) 97362-4049</p>
+      <p>⏰ SEGUNDA A SÁBADO — 8h ÀS 18h</p>
+      <p>📍 ATENDIMENTO EM BH, CONTAGEM, BETIM, BRUMADINHO E REGIÃO — RAIO DE 50 KM</p>
+    </div>
+
+  </div>
 
   <footer>
-    <p class="nome-rodape">❄️ FRIO-TECH</p>
-    <p>Assistência Técnica em Refrigeração — Geladeira • Freezer • Cervejeiro • Expositor • Frigobar</p>
-    <p>📍 Atendimento em Belo Horizonte, Contagem, Betim, Brumadinho e região — raio de 50 km</p>
-    <p style="margin-top: 15px; font-size: 14px;">📞 Ligar: (31) 97362-4049 | 💬 WhatsApp: (31) 99327-1939</p>
-    <p style="margin-top: 10px; font-size: 14px;">Taxa de deslocamento R$ 50,00 — isenta se aprovar o orçamento</p>
-    <p style="margin-top: 15px; font-size: 13px; opacity: 0.7;">© 2026 — Todos os direitos reservados | 90 dias de garantia em todos os serviços</p>
+    <p style="font-size: 18px; font-weight: 900;">❄️ FRIO-TECH BH — ASSISTÊNCIA TÉCNICA DE REFRIGERAÇÃO</p>
+    <p>📞 (31) 97362-4049 | 💬 WhatsApp direto no site</p>
+    <p>📍 Atendimento em BH e toda a região num raio de 50 km</p>
+    <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #333333;">© 2026 Frio-Tech BH — Todos os direitos reservados</p>
   </footer>
 
-  <a href="https://wa.me/5531993271939?text=Ola%2C%20vim%20atraves%20do%20site%20Frio-Tech%2C%20gostaria%20de%20um%20orcamento" target="_blank" class="whatsapp-fixo">💬</a>
+  <a href="https://wa.me/5531973624049" target="_blank" class="whatsapp-fixo">💬</a>
+
+<script>
+function confirmarValor() {
+  const valor = document.getElementById('valorPagamento').value;
+  const passos = document.getElementById('passosProximo');
+  const confirmado = document.getElementById('valorConfirmado');
+  const copiar = document.getElementById('valorCopiar');
+
+  if (!valor || valor <= 0) {
+    alert('⚠️ Digite um valor válido!');
+    return;
+  }
+
+  confirmado.textContent = 'R$ ' + valor + ',00';
+  copiar.textContent = 'R$ ' + valor + ',00';
+  passos.classList.add('show');
+  passos.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
 
 </body>
 </html>
