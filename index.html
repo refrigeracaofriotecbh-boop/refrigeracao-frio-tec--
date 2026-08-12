@@ -33,361 +33,286 @@
 
     body {
       background-color: #ffffff;
-      color: #000000;
+      color: #111111;
       line-height: 1.6;
-      font-size: 16px;
+      font-size: 17px;
+      padding-top: 70px; /* Espaço pro cabeçalho fixo */
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 15px;
+      padding: 0 20px;
+    }
+
+    /* FAIXA FIXA NO TOPO COM BOTÕES */
+    .faixa-fixa {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #001a33, #0052cc, #0099ff);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 9999;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .faixa-logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .faixa-logo span {
+      color: #00ffff;
+    }
+
+    .faixa-botoes {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-fixo {
+      padding: 10px 15px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-fixo:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-whatsapp-fixo {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-telefone-fixo {
+      background: #ff4400;
+      color: white;
     }
 
     header {
-      background: linear-gradient(135deg, #001a33, #004499, #0077ee);
+      background: linear-gradient(135deg, #001a33, #0052cc, #0099ff);
       color: white;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
-    }
-
-    .header-highlight {
-      background: linear-gradient(90deg, #ffcc00, #ff9900);
-      color: #000000;
-      padding: 6px 16px;
-      border-radius: 50px;
-      font-weight: 900;
-      font-size: 14px;
-      display: inline-block;
-      margin-bottom: 10px;
-      box-shadow: 0 3px 10px rgba(255,204,0,0.4);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 3px 10px rgba(255,204,0,0.4); }
-      50% { box-shadow: 0 3px 18px rgba(255,204,0,0.6); }
-      100% { box-shadow: 0 3px 10px rgba(255,204,0,0.4); }
+      padding: 30px 20px;
+      text-align: center;
     }
 
     .logo {
-      font-size: 26px;
+      font-size: 32px;
       font-weight: 900;
-      text-align: center;
       margin-bottom: 8px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .logo span {
       color: #00ffff;
     }
 
-    .garantia-badge {
-      background: rgba(255,204,0,0.15);
-      border: 2px solid #ffdd00;
-      border-radius: 8px;
-      padding: 8px 12px;
-      margin: 8px 0;
+    .subtitulo {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .destaque-chamada {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 25px 0;
+    }
+
+    .garantia-banner {
+      background: linear-gradient(90deg, #ffcc00, #ff9900);
+      color: #000;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: 900;
       display: inline-block;
-      font-size: 15px;
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.5;
-    }
-
-    .hours {
-      text-align: center;
-      font-size: 13px;
-      margin-bottom: 15px;
-      color: #ffffff;
-      font-weight: 500;
-    }
-
-    .contact-row {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn-whatsapp, .btn-phone {
-      padding: 12px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 900;
-      font-size: 15px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-      flex: 1;
-      justify-content: center;
-      max-width: 200px;
-    }
-
-    .btn-whatsapp {
-      background: linear-gradient(90deg, #22c55e, #16a34a);
-      color: white;
-    }
-
-    .btn-whatsapp:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-phone {
-      background: linear-gradient(90deg, #ff4400, #dd0000);
-      color: white;
-    }
-
-    .btn-phone:hover {
-      transform: translateY(-2px);
+      margin: 15px 0;
     }
 
     section {
-      padding: 40px 15px;
-      max-width: 1000px;
+      padding: 45px 20px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
     h2 {
-      color: #002255;
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 900;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      color: #003366;
       padding-bottom: 8px;
-      border-bottom: 4px solid;
-      border-image: linear-gradient(90deg, #0066cc, #00ccff);
-      border-image-slice: 1;
+      border-bottom: 3px solid #0099ff;
       display: inline-block;
     }
 
     h3 {
-      color: #001133;
-      font-size: 19px;
-      font-weight: 900;
-      margin: 18px 0 10px;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 20px 0 10px;
+      color: #002244;
     }
 
-    strong {
-      font-weight: 900;
-      color: #000000;
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
     }
 
-    .coverage-box {
+    .servico-card {
       background: #f0f7ff;
-      border: 2px solid #0077ee;
-      border-radius: 14px;
-      padding: 20px;
-      margin-top: 15px;
-      box-shadow: 0 4px 15px rgba(0,119,238,0.15);
-    }
-
-    .coverage-list p {
-      margin-bottom: 10px;
-      font-size: 15px;
-      color: #111111;
-      padding: 10px 12px;
-      background: white;
-      border-radius: 8px;
-      border-left: 4px solid #0099ff;
-      font-weight: 600;
-    }
-
-    .destaque-unico {
-      background: linear-gradient(135deg, #fff3cd, #ffe69c);
-      border: 3px solid #ffc107;
+      padding: 22px;
       border-radius: 12px;
-      padding: 18px;
-      margin: 25px 0;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(255,193,7,0.25);
+      border-left: 5px solid #0077ee;
     }
 
-    .destaque-unico strong {
-      font-size: 18px;
-      color: #856404;
-      display: block;
-      margin-bottom: 6px;
+    .servico-card h3 {
+      margin-top: 0;
     }
 
-    .services-grid {
+    .servico-card p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .motivos-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .service-card {
-      background: white;
-      padding: 22px 18px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 6px 20px rgba(0,102,204,0.12);
-      border-top: 5px solid #0066cc;
-      transition: transform 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .service-card h3 {
-      margin-top: 10px;
-      font-size: 17px;
-      margin-bottom: 10px;
-      color: #001133;
-    }
-
-    .service-card ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-      margin-top: 10px;
-    }
-
-    .service-card li {
-      font-size: 14px;
-      color: #222222;
-      padding: 4px 0;
-      padding-left: 18px;
-      position: relative;
-      font-weight: 500;
-    }
-
-    .service-card li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #009933;
-      font-weight: 900;
-      font-size: 15px;
-    }
-
-    .reasons-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 18px;
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
-    .reason-card {
-      background: white;
+    .motivo-card {
+      background: #f9f9f9;
       padding: 18px;
-      border-radius: 14px;
-      border-left: 5px solid #00ccff;
-      box-shadow: 0 4px 15px rgba(0,102,204,0.08);
+      border-radius: 10px;
+      border-left: 4px solid #00cc66;
     }
 
-    .reason-card strong {
-      font-size: 16px;
+    .motivo-card strong {
       display: block;
-      margin-bottom: 6px;
-      color: #001133;
+      margin-bottom: 5px;
+      color: #002244;
     }
 
-    .brands {
-      text-align: center;
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.8;
-      color: #111111;
-      background: white;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      border: 2px solid #e0efff;
+    .passos {
+      margin-top: 25px;
     }
 
-    .testimonial {
-      background: white;
-      padding: 18px;
-      border-radius: 14px;
-      margin-bottom: 15px;
-      border-left: 5px solid #ffcc00;
-      box-shadow: 0 4px 15px rgba(255,204,0,0.15);
+    .passo {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #f0f7ff;
+      border-radius: 10px;
     }
 
-    .stars {
-      color: #ffbb00;
-      font-size: 20px;
-      margin-bottom: 6px;
-    }
-
-    .buy-section {
-      background: linear-gradient(135deg, #fff9dd, #ffefaa);
-      padding: 20px;
-      border-radius: 14px;
-      border-left: 5px solid #ff9900;
-      margin: 25px 0 15px;
-      box-shadow: 0 4px 15px rgba(255,153,0,0.18);
-    }
-
-    .buy-section h3 {
-      color: #cc4400;
-      margin-top: 0;
+    .passo-numero {
+      background: #0077ee;
+      color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .marcas {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-top: 15px;
+    }
+
+    .area-atendimento {
+      background: #f0f7ff;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+
+    .cidades {
+      font-size: 18px;
+      font-weight: 700;
+      color: #004488;
+      margin: 12px 0;
+      line-height: 2;
+    }
+
+    .consulta-bairro {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 900;
+      text-decoration: none;
+      margin-top: 12px;
     }
 
     .faq-item {
       margin-bottom: 15px;
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      padding: 18px;
+      background: #f9f9f9;
+      border-radius: 10px;
       border-left: 4px solid #0099ff;
     }
 
     .faq-item strong {
-      color: #001133;
-      font-size: 16px;
+      color: #002244;
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
-    .contact-info {
-      background: linear-gradient(135deg, #e6f2ff, #b3d9ff);
-      padding: 22px 18px;
-      border-radius: 14px;
+    .contato {
+      background: linear-gradient(135deg, #0052cc, #0099ff);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
       text-align: center;
-      font-size: 15px;
-      border: 3px solid #0066cc;
-      box-shadow: 0 6px 20px rgba(0,102,204,0.18);
+      margin-top: 20px;
     }
 
-    .contact-info p {
-      margin: 10px 0;
-      font-weight: 700;
-    }
-
-    .contact-info a {
-      color: #003366;
+    .contato a {
+      color: #ffdd00;
       font-weight: 900;
       text-decoration: none;
     }
 
     footer {
-      background: linear-gradient(135deg, #001133, #002255);
+      background: #001a33;
       color: white;
       text-align: center;
-      padding: 25px 15px;
+      padding: 25px 20px;
       margin-top: 20px;
     }
 
-    footer p {
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-
-    .whatsapp-float {
+    .whatsapp-fixo-baixo {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: linear-gradient(90deg, #25d366, #128c7e);
+      background: #25d366;
       color: white;
       width: 60px;
       height: 60px;
@@ -397,248 +322,237 @@
       justify-content: center;
       font-size: 28px;
       text-decoration: none;
-      box-shadow: 0 5px 20px rgba(37,211,102,0.45);
+      box-shadow: 0 4px 15px rgba(37,211,102,0.4);
       z-index: 999;
     }
 
-    @media(max-width: 480px) {
-      .logo { font-size: 22px; }
-      h2 { font-size: 20px; }
-      section { padding: 30px 12px; }
-      .contact-row { gap: 10px; }
-      .btn-whatsapp, .btn-phone {
-        font-size: 14px;
-        padding: 12px 15px;
-      }
-      .garantia-badge { font-size: 14px; }
-      .destaque-unico strong { font-size: 16px; }
+    @media(max-width: 600px) {
+      .faixa-logo { font-size: 16px; }
+      .btn-fixo { padding: 8px 12px; font-size: 12px; }
+      .logo { font-size: 26px; }
+      h2 { font-size: 22px; }
+      section { padding: 30px 15px; }
+      .cidades { font-size: 16px; }
+      body { padding-top: 60px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- FAIXA FIXA NO TOPO — SEMPRE VISÍVEL -->
+  <div class="faixa-fixa">
+    <div class="faixa-logo">❄️ <span>Frio</span>Forte</div>
+    <div class="faixa-botoes">
+      <a href="https://wa.me/5531973624049?text=Ola%2C%20vim%20atraves%20do%20site%20FrioForte%2C%20gostaria%20de%20um%20orcamento." class="btn-fixo btn-whatsapp-fixo" target="_blank">
+        💬 WhatsApp
+      </a>
+      <a href="tel:+5531973624049" class="btn-fixo btn-telefone-fixo">
+        📞 Ligar
+      </a>
+    </div>
+  </div>
+
   <header>
-    <div class="container" style="text-align: center;">
-      <div class="header-highlight">⚡ Atendimento no mesmo dia!</div>
-      <h1 class="logo">❄️ <span>Frio</span>Forte</h1>
-      <div class="garantia-badge">
-        🏆 A ÚNICA EMPRESA DA REGIÃO QUE OFERECE 6 MESES DE GARANTIA NO SERVIÇO PRESTADO!<br>
-        <span style="font-size: 13px; opacity: 0.9;">Se der problema, voltamos sem custo extra pra você!</span>
-      </div>
-      <div class="hours">⏰ Segunda a Sábado — 8h às 18h</div>
-      <div class="contact-row">
-        <a href="https://wa.me/5531973624049?text=Ola%2C%20vim%20atraves%20do%20site%20FrioForte%20Refrigeracao%2C%20gostaria%20de%20solicitar%201%20orcamento%20com%20urgencia." class="btn-whatsapp" target="_blank">
-          💬 WhatsApp
-        </a>
-        <a href="tel:+5531973624049" class="btn-phone">
-          📞 Ligar
-        </a>
-      </div>
+    <div class="container">
+      <div class="logo">❄️ <span>Frio</span>Forte</div>
+      <div class="subtitulo">Assistência Técnica em Refrigeração</div>
+
+      <div class="destaque-chamada">Seu equipamento parou?<br>A FrioForte resolve.</div>
+
+      <p>Manutenção especializada de geladeiras, freezers, cervejeiras, frigobares e expositores, com atendimento em domicílio.</p>
+
+      <div class="garantia-banner">🏆 6 MESES DE GARANTIA</div>
+      <p>Mais tranquilidade para você contratar nosso serviço.</p>
     </div>
   </header>
 
   <section>
-    <h2>📍 Área de Atendimento</h2>
-    <div class="coverage-box">
-      <div class="coverage-list">
-        <p><strong>Belo Horizonte:</strong> Centro, Barreiro, Pampulha, Venda Nova, Ouro Preto, São Vicente, Floresta, São Cristóvão, Carlos Prates, Cachoeirinha, Glória, Gutierrez, Savassi, Lourdes, Santo Antônio, São Bento, Nova Esperança e todos os demais bairros</p>
-        <p><strong>Contagem:</strong> Centro, Eldorado, Água Branca, Cabral, Amazonas, Bairro das Indústrias, Cidade Industrial, Riacho das Pedras, Novo Eldorado, Jardim Laguna e região</p>
-        <p><strong>Betim:</strong> Centro, Ingá, Citrolândia, Jardim das Alterosas, Iguaçu, São Caetano, Santa Cruz, Petrópolis, Distrito Industrial e bairros vizinhos</p>
-        <p><strong>Ribeirão das Neves:</strong> Centro, Jardim Petrópolis, Veneza, Industrial, São Cristóvão, Santa Helena, Marajó, Liberdade e toda a cidade</p>
-        <p><strong>Santa Luzia:</strong> Centro, São Benedito, Vila Monsenhor, São Vicente, Frimisa, Palmital, Nossa Senhora de Fátima e região</p>
-        <p><strong>Vespasiano:</strong> Centro, Jardim Aeroporto, Vila Esperança, São José, Industrial, Santa Rosa e arredores</p>
-        <p><strong>Sabará:</strong> Centro, Santa Tereza, Caetano Furquim, Nossa Senhora de Fátima, Vila dos Ipês e bairros próximos</p>
-        <p><strong>Nova Lima:</strong> Centro, Vila Del Rey, Jardim Canadá, Bela Vista, Vale do Sol, Alphaville e toda a cidade</p>
-        <p><strong>Igarapé:</strong> Centro, São Geraldo, Vila Nova, São Vicente, Jardim América e região</p>
-        <p><strong>Brumadinho:</strong> Centro, Parque das Águas, São José, Vila Domingos, Santa Luzia e bairros</p>
-        <p><strong>Também atendemos:</strong> Raposos, Ibirité, Esmeraldas, Capim Branco, Pedro Leopoldo e cidades vizinhas</p>
-      </div>
-    </div>
+    <h2>🛡️ 6 Meses de Garantia</h2>
+    <p>Somos a única empresa da região que oferece <strong>6 meses de garantia nos serviços prestados.</strong> Se der problema nesse prazo, voltamos sem custo extra pra você!</p>
   </section>
 
   <section>
     <h2>🔧 Nossos Serviços</h2>
+    <p>Manutenção, reforma e compra e venda de equipamentos residenciais e comerciais.</p>
 
-    <div class="destaque-unico">
-      <strong>🏆 A ÚNICA EMPRESA DA REGIÃO QUE OFERECE 6 MESES DE GARANTIA NO SERVIÇO PRESTADO!</strong>
-      <p>Se der problema dentro desse prazo, voltamos sem custo extra pra você! Pode confiar.</p>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <div style="font-size: 40px;">🧊</div>
-        <h3>Manutenção de Geladeira</h3>
-        <ul>
-          <li>Geladeira não gela ou gela pouco</li>
-          <li>Acumula muito gelo ou não faz gelo</li>
-          <li>Vaza água no chão ou dentro do aparelho</li>
-          <li>Faz barulho estranho ou muito forte</li>
-          <li>Não liga mais ou desliga sozinha</li>
-          <li>A luz acende mas não gela nada</li>
-          <li>Está gastando muita energia</li>
-          <li>Troca de compressor, carga de gás, placa e componentes</li>
-        </ul>
+    <div class="servicos-grid">
+      <div class="servico-card">
+        <h3>🧊 Geladeiras</h3>
+        <p>Não gela, acumula gelo, vaza água, não liga, faz barulho, gasta muita energia. Troca de compressor, carga de gás, placa e peças.</p>
       </div>
 
-      <div class="service-card">
-        <div style="font-size: 40px;">❄️</div>
-        <h3>Manutenção de Freezer</h3>
-        <ul>
-          <li>Não baixa a temperatura certa</li>
-          <li>Desliga sozinho ou não liga de jeito nenhum</li>
-          <li>Forma muito gelo nas paredes</li>
-          <li>Para de funcionar de um dia pro outro</li>
-          <li>Motor fica ligado direto sem parar</li>
-          <li>Faz barulho excessivo ou vibrando</li>
-          <li>Troca de compressor, carga de gás e revisão completa</li>
-          <li>Atendemos freezer horizontal e vertical de todas as marcas</li>
-        </ul>
+      <div class="servico-card">
+        <h3>❄️ Freezers</h3>
+        <p>Não baixa temperatura, desliga sozinho, forma muito gelo, motor ligado direto. Atendemos horizontal e vertical de todas as marcas.</p>
       </div>
 
-      <div class="service-card">
-        <div style="font-size: 40px;">🍺</div>
-        <h3>Manutenção de Cervejeiro</h3>
-        <ul>
-          <li>Não gela o suficiente pra gelar a bebida</li>
-          <li>Demora muito tempo pra gelar</li>
-          <li>Faz barulho estranho ou fica vibrando</li>
-          <li>Ventilação parada ou com problema</li>
-          <li>Acumula gelo na parte de trás</li>
-          <li>Termostato não marca a temperatura certa</li>
-          <li>Limpeza completa do sistema de refrigeração</li>
-          <li>Carga de gás e troca de peças e componentes</li>
-        </ul>
+      <div class="servico-card">
+        <h3>🍺 Cervejeiras</h3>
+        <p>Não gela a bebida, demora muito, ventilação parada, termostato com defeito. Limpeza, gás e troca de componentes.</p>
       </div>
 
-      <div class="service-card">
-        <div style="font-size: 40px;">🏪</div>
-        <h3>Frigobar e Expositor</h3>
-        <ul>
-          <li>Frigobar não gela ou gela muito fraco</li>
-          <li>Expositor desliga sozinho ou não atinge temperatura</li>
-          <li>Vaza água ou vaza gás do sistema</li>
-          <li>Problemas na placa eletrônica ou comando</li>
-          <li>Motor não dá partida ou para de funcionar</li>
-          <li>Termostato com defeito ou não responde</li>
-          <li>Revisão completa e manutenção preventiva</li>
-          <li>Atendemos aparelhos residenciais e comerciais</li>
-        </ul>
+      <div class="servico-card">
+        <h3>🏪 Frigobar e Expositor</h3>
+        <p>Não gela, desliga sozinho, vaza água ou gás, placa eletrônica com problema. Revisão completa preventiva.</p>
       </div>
-    </div>
 
-    <div class="buy-section">
-      <h3>💰 Compra e Venda de Aparelhos</h3>
-      <p><strong>Não vale a pena consertar? Nós compramos!</strong></p>
-      <p style="margin-top: 10px;">Se o conserto não valer a pena ou você já quer trocar, compramos sua geladeira, freezer, cervejeiro ou expositor — funcionando ou com defeito. Também vendemos aparelhos revisados com garantia de fábrica.</p>
-      <p style="margin-top: 8px; font-weight: 900;">👉 Chama no WhatsApp e faz sua avaliação sem compromisso!</p>
+      <div class="servico-card">
+        <h3>🛠️ Reforma de Freezer</h3>
+        <p>Reforma, recuperação e personalização conforme sua necessidade.</p>
+      </div>
+
+      <div class="servico-card">
+        <h3>🔄 Compra e Venda</h3>
+        <p>Compramos seu aparelho funcionando ou com defeito. Também vendemos revisado com garantia.</p>
+      </div>
     </div>
   </section>
 
   <section>
     <h2>📝 Por que Escolher a FrioForte?</h2>
-    <div class="reasons-grid">
-      <div class="reason-card">
-        <strong>🏆 A ÚNICA EMPRESA DA REGIÃO COM 6 MESES DE GARANTIA NO SERVIÇO PRESTADO!</strong>
-        <p>Ninguém mais oferece isso. Se der problema, voltamos sem custo extra pra você — pode confiar!</p>
+
+    <div class="motivos-grid">
+      <div class="motivo-card">
+        <strong>🛡️ 6 meses de garantia</strong>
+        <p>Se der problema, voltamos sem custo extra.</p>
       </div>
-      <div class="reason-card">
-        <strong>Orçamento Gratuito</strong>
-        <p>Taxa de deslocamento R$ 50,00 — só cobrada se o serviço for aprovado.</p>
+      <div class="motivo-card">
+        <strong>🏠 Atendimento em domicílio</strong>
+        <p>Vou até você. Não precisa transportar nada.</p>
       </div>
-      <div class="reason-card">
-        <strong>🚚 Atendimento em Domicílio</strong>
-        <p>Vou até você! Não precisa trazer o aparelho em lugar nenhum.</p>
+      <div class="motivo-card">
+        <strong>🔧 Serviço especializado</strong>
+        <p>Avaliação antes de qualquer coisa.</p>
       </div>
-      <div class="reason-card">
-        <strong>🔧 Peças de Qualidade</strong>
-        <p>Só troco peça com sua autorização prévia.</p>
+      <div class="motivo-card">
+        <strong>⚡ Agilidade</strong>
+        <p>Atendimento no mesmo dia conforme rota.</p>
       </div>
-      <div class="reason-card">
-        <strong>⏰ Pontualidade</strong>
-        <p>Chego no horário combinado. Não te deixo esperando.</p>
+      <div class="motivo-card">
+        <strong>💰 Orçamento transparente</strong>
+        <p>Você aprova antes de começar.</p>
       </div>
-      <div class="reason-card">
-        <strong>⚡ Atendimento no Mesmo Dia</strong>
-        <p>Resolvendo seu problema com rapidez e qualidade.</p>
+      <div class="motivo-card">
+        <strong>📲 Pelo WhatsApp</strong>
+        <p>Manda foto, explica o problema, agiliza tudo.</p>
       </div>
-      <div class="reason-card">
-        <strong>💰 Preço Justo</strong>
-        <p>Valor claro e direto. Sem surpresa na hora de pagar.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🚗 Como Funciona a Visita Técnica?</h2>
+
+    <div class="passos">
+      <div class="passo">
+        <div class="passo-numero">1</div>
+        <div>
+          <strong>Você chama</strong>
+          <p>Manda foto ou vídeo do aparelho, explica o problema e informa seu bairro.</p>
+        </div>
+      </div>
+
+      <div class="passo">
+        <div class="passo-numero">2</div>
+        <div>
+          <strong>Visita técnica</strong>
+          <p>Taxa de deslocamento: <strong>R$ 50,00</strong>.</p>
+        </div>
+      </div>
+
+      <div class="passo">
+        <div class="passo-numero">3</div>
+        <div>
+          <strong>Aprovação do orçamento</strong>
+          <p>Se aprovar e realizar o serviço, <strong>os R$ 50,00 NÃO são cobrados!</strong></p>
+        </div>
       </div>
     </div>
   </section>
 
   <section>
     <h2>🏷️ Trabalhamos com Todas as Marcas</h2>
-    <p class="brands">Brastemp • Consul • Electrolux • Samsung • LG • Panasonic • Gelopar • Metalfrio • Dako • Philco e todas as outras marcas!</p>
-  </section>
-
-  <section>
-    <h2>💬 O Que Dizem Nossos Clientes</h2>
-    <div class="testimonial">
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <strong>Maria Silva</strong>
-      <p>Chegou rápido, consertou minha geladeira no mesmo dia. Preço justo e trabalho bem feito. Recomendo demais!</p>
-      <small>Avaliado no Google</small>
-    </div>
-    <div class="testimonial">
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <strong>João Costa</strong>
-      <p>Profissional de verdade. Explicou direitinho o que estava acontecendo e resolveu de primeira.</p>
-      <small>Avaliado no Google</small>
-    </div>
-    <div class="testimonial">
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <strong>Ana Carolina</strong>
-      <p>Atendimento nota 10! Pontual, educado e consertou minha cervejeira.</p>
-      <small>Avaliado no Google</small>
+    <div class="marcas">
+      Brastemp • Consul • Electrolux • Samsung • LG • Panasonic • Gelopar • Metalfrio • Dako • Philco e outras!
     </div>
   </section>
 
   <section>
-    <h2>❓ Dúvidas Comuns</h2>
-    <div class="faq-item">
-      <strong>🏆 A garantia é de quanto tempo?</strong>
-      <p><strong>Somos a ÚNICA EMPRESA DA REGIÃO que oferece 6 meses de garantia no serviço prestado!</strong> Se der problema nesse prazo, voltamos sem custo extra pra você. Pode confiar!</p>
-    </div>
-    <div class="faq-item">
-      <strong>📍 Vocês atendem no meu bairro?</strong>
-      <p>Confira acima a lista completa de cidades e bairros. Chama no WhatsApp e confiro na hora!</p>
-    </div>
-    <div class="faq-item">
-      <strong>💰 Cobram taxa de visita?</strong>
-      <p>Taxa de deslocamento R$ 50,00 — só cobrada se o serviço for aprovado.</p>
-    </div>
-    <div class="faq-item">
-      <strong>⏰ Quando o técnico chega?</strong>
-      <p>Atendimento no mesmo dia ou no dia seguinte, conforme disponibilidade.</p>
-    </div>
-    <div class="faq-item">
-      <strong>📦 Tem peça na hora?</strong>
-      <p>Tenho as mais comuns comigo. Se precisar de algo específico, te aviso o prazo.</p>
-    </div>
-    <div class="faq-item">
-      <strong>🛠️ E se precisar trocar peça?</strong>
-      <p>Só troco com sua autorização. Te falo o valor e você decide.</p>
-    </div>
-    <div class="faq-item">
-      <strong>🛒 Não quero consertar — vocês compram mesmo?</strong>
-      <p>Compramos sim! Avaliamos sua geladeira, freezer ou cervejeiro. Fazemos proposta na hora.</p>
+    <h2>📍 Área de Atendimento</h2>
+    <div class="area-atendimento">
+      <p>Atendemos <strong>Belo Horizonte e região metropolitana</strong>, conforme disponibilidade de rota.</p>
+
+      <div class="cidades">
+        Belo Horizonte • Contagem • Betim • Ribeirão das Neves • Santa Luzia • Vespasiano • Sabará • Nova Lima
+      </div>
+
+      <p>Também atendemos outras cidades da região metropolitana conforme disponibilidade.</p>
+
+      <a href="https://wa.me/5531973624049?text=Ola%2C%20quero%20saber%20se%20atendo%20no%20meu%20bairro%21%20Meu%20bairro%20e%3A%20" class="consulta-bairro" target="_blank">
+        📍 CONSULTAR MEU BAIRRO
+      </a>
     </div>
   </section>
 
   <section>
-    <h2>📞 Fale Conosco</h2>
-    <div class="contact-info">
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/5531973624049?text=Ola%2C%20vim%20atraves%20do%20site%20FrioForte%20Refrigeracao%2C%20gostaria%20de%20solicitar%201%20orcamento%20com%20urgencia." target="_blank">(31) 97362-4049</a></p>
-      <p><strong>Ligar:</strong> <a href="tel:+5531973624049">(31) 97362-4049</a></p>
-      <p><strong>⏰ Segunda a Sábado — 8h às 18h</strong></p>
-      <p><strong>⚡ Atendimento no mesmo dia</strong></p>
-      <p style="margin-top: 12px; font-weight: 900; color: #002255;">🏆 A ÚNICA EMPRESA DA REGIÃO COM 6 MESES DE GARANTIA NO SERVIÇO PRESTADO!</p>
+    <h2>❓ Perguntas Frequentes</h2>
+
+    <div class="faq-item">
+      <strong>Qual é a garantia do serviço?</strong>
+      <p>Oferecemos 6 meses de garantia nos serviços prestados. Se der problema nesse prazo, voltamos sem custo extra.</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>Existe taxa de deslocamento?</strong>
+      <p>Sim, R$ 50,00. Se você aprovar o serviço, essa taxa não é cobrada.</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>O técnico vai até minha casa?</strong>
+      <p>Sim, atendimento em domicílio conforme disponibilidade de rota.</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>Preciso levar o aparelho até você?</strong>
+      <p>Não! O atendimento é feito no local.</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>Troca peça sem minha autorização?</strong>
+      <p>Nunca! Toda troca é combinada com você antes.</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>Como pedir orçamento?</strong>
+      <p>Clica no WhatsApp, manda foto do aparelho, explica o defeito e informa seu bairro.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>📞 Fale com a FrioForte</h2>
+    <div class="contato">
+      <h3>💬 WhatsApp</h3>
+      <p><a href="https://wa.me/5531973624049?text=Ola%2C%20vim%20atraves%20do%20site%20FrioForte%2C%20gostaria%20de%20um%20orcamento." target="_blank">(31) 97362-4049</a></p>
+
+      <h3>📞 Telefone</h3>
+      <p><a href="tel:+5531973624049">(31) 97362-4049</a></p>
+
+      <p style="margin-top: 20px; font-size: 14px;">⏰ Segunda a Sábado — 8h às 18h</p>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p style="font-size: 20px; font-weight: 900; margin-bottom: 8px;">❄️ FrioForte</p>
-      <p style="color: #ffdd00; font-we
+      <p style="font-size: 22px; font-weight: 900;">❄️ FrioForte</p>
+      <p style="color: #ffdd00; font-weight: 700; margin: 8px 0;">6 meses de garantia nos serviços prestados</p>
+      <p>Assistência Técnica • Compra e Venda de Aparelhos</p>
+      <p style="margin-top: 10px; font-size: 14px;">📞 (31) 97362-4049 | 💬 WhatsApp (31) 97362-4049</p>
+    </div>
+  </footer>
+
+  <!-- Botão fixo no canto de baixo -->
+  <a href="https://wa.me/5531973624049?text=Ola%2C%20vim%20atraves%20do%20site%20FrioForte%2C%20gostaria%20de%20um%20orcamento." class="whatsapp-fixo-baixo" target="_blank">
+    💬
+  </a>
+
+</body>
+</html>
